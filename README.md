@@ -74,7 +74,7 @@ Built by [Ekaterina Pykhova](https://www.linkedin.com/in/ekaterina-pykhova/) —
 Finsweet Client First and BEM — integrated into the skill by Ekaterina Pykhova.
 
 **UX Rules Quick Reference**
-Derived from the [UX UI PRO MAX](https://github.com/ux-ui-pro-max) database.
+Derived from the [UX UI PRO MAX](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) skill by nextlevelbuilder.
 
 ## License
 
