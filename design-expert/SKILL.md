@@ -254,7 +254,7 @@ python3 scripts/search.py "<keyword>" --domain <domain> [-n <max_results>]
 | `style` | UI styles, effects | `"glassmorphism dark"` |
 | `color` | Color palettes | `"fintech trust"` |
 | `typography` | Font pairings | `"elegant luxury"` |
-| `google-fonts` | Individual fonts | `"sans serif variable"` |
+| `icons` | Icon library search | `"outlined accessible"` |
 | `chart` | Chart recommendations | `"real-time dashboard"` |
 | `ux` | Best practices | `"animation accessibility"` |
 | `landing` | Page structure | `"hero social-proof"` |
@@ -267,8 +267,7 @@ python3 scripts/search.py "<keyword>" --domain <domain> [-n <max_results>]
 python3 scripts/search.py "<keyword>" --stack <stack-name>
 ```
 
-Available stacks: react, nextjs, vue, svelte, react-native, flutter, swiftui,
-html-tailwind, angular, shadcn, and more.
+Available stacks: react, nextjs, angular, flutter, svelte.
 
 ---
 

@@ -68,7 +68,11 @@ CSV_CONFIG = {
 }
 
 STACK_CONFIG = {
-    "react-native": {"file": "stacks/react-native.csv"},
+    "react":        {"file": "stacks/react.csv"},
+    "nextjs":       {"file": "stacks/nextjs.csv"},
+    "angular":      {"file": "stacks/angular.csv"},
+    "flutter":      {"file": "stacks/flutter.csv"},
+    "svelte":       {"file": "stacks/svelte.csv"},
 }
 
 # Common columns for all stacks
