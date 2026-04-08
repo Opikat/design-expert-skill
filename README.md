@@ -67,14 +67,15 @@ Or drop the `design-expert/` folder into your Claude Code skills directory.
 Based on the `ux-designer` and `ui-designer` skills by [Carmen Rincon](https://www.linkedin.com/in/carmenerincon/).
 Original skills cover UX psychology, visual design systems, and component craft.
 
-**Design System Generator, Typography Calculator**
+**Typography Calculator + font metrics database**
 Built by [Ekaterina Pykhova](https://www.linkedin.com/in/ekaterina-pykhova/) — product designer based in Prague.
+Font metrics (xHeight, capHeight, capWidth) collected via a custom Figma automation script: text placed, converted to outlines, measured, and recorded across 8000+ styles.
+
+**Design System Generator, UX Rules Quick Reference**
+Derived from the [UX UI PRO MAX](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) skill by nextlevelbuilder.
 
 **Naming conventions**
 Finsweet Client First and BEM — integrated into the skill by Ekaterina Pykhova.
-
-**UX Rules Quick Reference**
-Derived from the [UX UI PRO MAX](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) skill by nextlevelbuilder.
 
 ## License
 
