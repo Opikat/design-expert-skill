@@ -50,7 +50,7 @@ CSV databases powering the search scripts:
 - `ux-guidelines.csv` — UX best practices database
 - `app-interface.csv` — app interface accessibility and interaction patterns
 - `react-performance.csv` — React/Next.js performance patterns
-- `stacks/` — stack-specific guidelines (React, Next.js, Vue, Svelte, Flutter, SwiftUI, Angular, shadcn, and more)
+- `stacks/` — stack-specific guidelines (React, Next.js, Angular, Flutter, Svelte)
 
 ## Installation
 
@@ -65,7 +65,7 @@ Or drop the `design-expert/` folder into your Claude Code skills directory.
 
 **UX strategy and visual craft foundations**
 Based on the `ux-designer` and `ui-designer` skills by [Carmen Rincon](https://www.linkedin.com/in/carmenerincon/).
-Used with permission. Original skills cover UX psychology, visual design systems, and component craft.
+Original skills cover UX psychology, visual design systems, and component craft.
 
 **Design System Generator, Typography Calculator**
 Built by [Ekaterina Pykhova](https://www.linkedin.com/in/ekaterina-pykhova/) — product designer based in Prague.
