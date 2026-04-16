@@ -1,6 +1,6 @@
 ---
 name: design-expert
-description: "Unified UI/UX design skill: strategy, visual craft, and design system generation. Use this skill for ANY design-related task — building interfaces, reviewing existing UI/UX, choosing styles/colors/fonts, creating design systems, auditing accessibility, planning user flows, or polishing visual details. Triggers on: 'design', 'UI', 'UX', 'layout', 'spacing', 'colors', 'typography', 'dashboard', 'landing page', 'component', 'responsive', 'dark mode', 'accessibility', 'user flow', 'wireframe', 'prototype', 'make it look good', 'it looks off', 'how should this flow', 'design system', 'style guide', 'naming convention', 'Client First', 'BEM'. Also activates when building any user-facing interface (website, app, dashboard, form, modal, card, table, chart, onboarding, checkout) even without explicitly saying 'design'. This is the ONLY design skill — do NOT look for separate UX or UI skills. Do NOT activate for pure backend logic, database schemas, API design without UI, or DevOps."
+description: "Unified UI/UX design skill: strategy, visual craft, aesthetic direction, design system generation, and live-site review. Use this skill for ANY design-related task — building distinctive interfaces, reviewing existing UI/UX, fixing layouts at the source-code level, choosing styles/colors/fonts, creating design systems, auditing accessibility, planning user flows, or polishing visual details. Triggers on: 'design', 'UI', 'UX', 'layout', 'spacing', 'colors', 'typography', 'dashboard', 'landing page', 'component', 'responsive', 'dark mode', 'accessibility', 'user flow', 'wireframe', 'prototype', 'make it look good', 'it looks off', 'how should this flow', 'design system', 'style guide', 'naming convention', 'Client First', 'BEM', 'review website design', 'check the UI', 'fix the layout', 'find design problems', 'aesthetic direction', 'distinctive', 'generic', 'polish'. Also activates when building any user-facing interface (website, app, dashboard, form, modal, card, table, chart, onboarding, checkout) even without explicitly saying 'design'. This is the ONLY design skill — do NOT look for separate UX, UI, frontend-design, or web-design-reviewer skills. Do NOT activate for pure backend logic, database schemas, API design without UI, or DevOps."
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch
 ---
 
@@ -18,19 +18,21 @@ proceed through the workflow below.
 
 ## How This Skill Works
 
-This skill has three layers, and your job is to select the right depth for the task:
+This skill has five layers, and your job is to select the right depth for the task:
 
 | Task Type | What to Do | Reference to Read |
 |-----------|-----------|-------------------|
 | **UX strategy** (flows, IA, user psychology) | Follow the UX Strategy section below, then read `references/ux-strategy.md` for deep dive | `references/ux-strategy.md` |
 | **Visual design** (spacing, color, type, polish) | Follow the Visual Craft section below, then read `references/visual-craft.md` for deep dive | `references/visual-craft.md` |
+| **Aesthetic direction** (distinctive look, avoiding generic AI aesthetic) | Follow the Aesthetic Direction section below, then read `references/aesthetic-direction.md` | `references/aesthetic-direction.md` |
 | **Design system generation** (palettes, font pairings, style matching) | Run the Python search scripts | See "Design System Generator" section |
-| **Full build** (new page/component from scratch) | Do ALL three in sequence: UX → Visual → Generate | All references as needed |
-| **Review/audit** (existing interface) | Combine UX + Visual checklists | Both strategy + craft references |
+| **Live-site review** (review running website, fix issues in source code) | Follow the Live Site Review Workflow below | `references/visual-checklist.md`, `references/framework-fixes.md` |
+| **Full build** (new page/component from scratch) | Do ALL in sequence: UX → Aesthetic → Visual → Generate | All references as needed |
+| **Review/audit** (existing interface or codebase) | Combine UX + Visual checklists. For running site, use Live Site Review Workflow | All relevant references |
 | **Typography calculation** (line-height, tracking, type scale) | **ALWAYS run** `typography_calc.py` — never guess type values | See "Typography Calculator" section |
 | **Naming conventions** | Apply naming rules from references | `references/naming-conventions.md` |
 
-Scale to scope: a quick button fix doesn't need a full UX strategy. A new product page does.
+Scale to scope: a quick button fix doesn't need a full UX strategy. A new product page does. A landing page needs a committed aesthetic direction before any visual decisions.
 
 ---
 
@@ -197,6 +199,56 @@ checkout uses CLARITY with WARM tones and FRIENDLY typography.
 
 ---
 
+## Aesthetic Direction — Commit to a Vision
+
+Distinctive interfaces don't happen by accident. They happen because someone
+picked a clear conceptual direction and executed it with precision. Before
+visual craft decisions, commit to the direction. Before writing code, commit
+to the direction.
+
+For the full catalog of directions, execution guidelines, and anti-patterns,
+read [references/aesthetic-direction.md](references/aesthetic-direction.md).
+
+### Pick an Extreme
+
+"Balanced" and "tasteful" are not aesthetic directions — they're the absence
+of one. Pick one of these and commit:
+
+Brutally minimal · Maximalist chaos · Retro-futuristic · Organic/natural ·
+Luxury/refined · Playful/toy-like · Editorial/magazine · Brutalist/raw ·
+Art deco/geometric · Soft/pastel · Industrial/utilitarian · Editorial brutalism
+
+Bold maximalism and refined minimalism both work. The key is intentionality,
+not intensity. Match implementation complexity to the vision — maximalism
+needs elaborate motion, minimalism needs precision in every remaining detail.
+
+### Avoid the Generic-AI Tells
+
+These are the hallmarks of "AI slop" output. If you notice any, stop and
+re-commit to a direction:
+
+- **Font defaults:** Inter, Roboto, Arial, system-font as heading + body
+- **Purple gradient on white background** — the single strongest AI-generated tell
+- **Predictable layouts:** centered hero → three-column feature grid → final CTA
+- **Cookie-cutter components:** default shadcn card, default gradient button
+- **Evenly-distributed color palettes** — dominant colors with sharp accents outperform timid ones
+- **Solid color backgrounds everywhere** — atmosphere comes from gradient meshes, noise, texture, layered transparencies
+- **Converging on the same font** across projects (Space Grotesk, for example)
+
+Vary between light and dark themes, different fonts, different aesthetics.
+No two designs should be the same. Don't hold back — commit fully to a
+distinctive vision.
+
+### Aesthetic Execution Essentials
+
+- **Typography:** Pair a distinctive display font with a refined body font. Avoid generic fonts.
+- **Color:** Dominant colors with sharp accents. Use CSS variables for consistency.
+- **Motion:** High-impact moments over scattered micro-interactions. One orchestrated page load beats ten subtle hovers.
+- **Spatial composition:** Asymmetry, overlap, diagonal flow, grid-breaking. Generous negative space OR controlled density — pick one.
+- **Backgrounds:** Gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, grain overlays.
+
+---
+
 ## Naming Conventions
 
 Apply naming conventions consistently across all code output.
@@ -353,6 +405,156 @@ These 99 rules are organized by priority. For full details, read
 
 ---
 
+## Live Site Review Workflow
+
+Use this workflow when the task is to visually inspect a **running website** and
+fix the issues at the source-code level. This is different from reviewing a
+Figma file or a static component in isolation — it requires browser automation
+(e.g. Playwright MCP), access to the source code, and a source-of-truth loop
+between what you see and what you change.
+
+For the full framework-specific fix patterns (pure CSS, Tailwind, CSS Modules,
+styled-components/Emotion, Vue scoped styles, Next.js App Router), see
+[references/framework-fixes.md](references/framework-fixes.md).
+
+For the exhaustive visual inspection checklist (layout, typography, color,
+responsive, interactive, images, accessibility, performance), see
+[references/visual-checklist.md](references/visual-checklist.md).
+
+### Step A: Information Gathering
+
+1. **Confirm the URL.** Localhost, staging, or production. Ask if unprovided.
+2. **Detect the project.** Look at `package.json`, `tsconfig.json`,
+   `tailwind.config`, `next.config`, `vite.config`, `nuxt.config`, `src/` or `app/`.
+3. **Identify the styling method:**
+
+   | Method | Detection | Edit Target |
+   |--------|-----------|-------------|
+   | Pure CSS | `*.css` files | Global or component CSS |
+   | SCSS/Sass | `*.scss`, `*.sass` | SCSS files |
+   | CSS Modules | `*.module.css` | Module files |
+   | Tailwind CSS | `tailwind.config.*` | className in components |
+   | styled-components | `styled.` in JS/TS | JS/TS files |
+   | Emotion | `@emotion/` imports | JS/TS files |
+
+### Step B: Visual Inspection
+
+1. Navigate to the URL and capture screenshots.
+2. Retrieve DOM structure/snapshot when possible.
+3. Test at **all viewports** (do not skip):
+
+   | Name | Width | Device |
+   |------|-------|--------|
+   | Mobile | 375px | iPhone SE/12 mini |
+   | Tablet | 768px | iPad |
+   | Desktop | 1280px | Standard |
+   | Wide | 1920px | Large display |
+
+4. Check against the severity matrix:
+
+   | Category | Issues | Severity |
+   |----------|--------|----------|
+   | Layout | Overflow, overlap, alignment, inconsistent spacing, text clipping | High/Medium |
+   | Responsive | Mobile-unfriendly, bad breakpoints, small touch targets | High/Medium |
+   | Accessibility | Insufficient contrast, missing focus state, missing alt text | High/Medium |
+   | Visual consistency | Mixed fonts, unbranded colors, uneven spacing | Medium/Low |
+
+### Step C: Issue Prioritization
+
+- **P0 — Critical:** Functionality breaking (complete overlap, content disappears)
+- **P1 — High:** Serious UX issues (unreadable text, inoperable buttons) — fix immediately
+- **P2 — Medium:** Alignment issues, spacing inconsistencies — fix next
+- **P3 — Low:** Minor positional differences, subtle color variations — fix if possible
+
+### Step D: Apply Fixes at the Source
+
+1. Locate the source file via class name, ID, or component name.
+2. Apply the minimal change that resolves the issue — do not refactor surrounding code.
+3. Follow the project's existing code style and patterns.
+4. Use `references/framework-fixes.md` for framework-specific patterns.
+
+**Fix principles:**
+- Minimal changes — only what's needed to resolve the issue
+- Respect existing patterns — follow the project's code style
+- Avoid breaking changes — be careful of side effects on other areas
+- Fix one issue at a time, verify, then move on
+
+### Step E: Re-verification
+
+1. Reload or wait for HMR.
+2. Screenshot the fixed area and compare before/after.
+3. Regression-check adjacent areas and responsive breakpoints.
+4. **Iteration limit:** if more than 3 fix attempts on one issue, consult the user.
+
+### Step F: Report
+
+Produce a summary table:
+
+```markdown
+# Web Design Review Results
+
+| Item | Value |
+|------|-------|
+| Target URL | {url} |
+| Framework | {detected} |
+| Styling | {CSS / Tailwind / etc.} |
+| Tested Viewports | Desktop, Tablet, Mobile |
+| Issues Detected | {N} |
+| Issues Fixed | {M} |
+
+## Detected Issues
+### [P1] {Title}
+- **Page:** {path}
+- **Element:** {selector}
+- **Issue:** {description}
+- **Fixed File:** `{path}`
+- **Fix Details:** {what changed and why}
+- **Screenshot:** Before / After
+
+## Unfixed Issues
+### {Title}
+- **Reason:** {why not fixed}
+- **Recommended Action:** {for user}
+
+## Recommendations
+- {future improvements}
+```
+
+### Useful Debug Techniques
+
+Temporary visualization in browser DevTools:
+
+```css
+/* Development only — find bounds */
+* { outline: 1px solid red !important; }
+```
+
+Detect overflow from the console:
+
+```javascript
+document.querySelectorAll('*').forEach(el => {
+  if (el.scrollWidth > el.clientWidth) console.log('H-overflow:', el);
+  if (el.scrollHeight > el.clientHeight) console.log('V-overflow:', el);
+});
+```
+
+### DO / DON'T
+
+✅ Save screenshots before changes · Fix one issue at a time · Follow existing code style · Confirm with user before major changes · Document fix details
+
+❌ Large refactors without confirmation · Ignoring design system or brand guidelines · Fixes that ignore performance · Multiple issues at once (hard to verify)
+
+### Compatible Browser Automation
+
+| Tool | Use |
+|------|-----|
+| Playwright MCP | Recommended — `browser_navigate`, `browser_snapshot`, `browser_take_screenshot`, `browser_click`, `browser_resize`, `browser_console_messages` |
+| Selenium | Broad browser support |
+| Puppeteer | Chrome/Chromium, Node.js |
+| Cypress | Integrates with E2E |
+
+---
+
 ## Accessibility (Non-Negotiable)
 
 These are not optional polish — they are fundamental requirements:
@@ -457,6 +659,7 @@ Don't just execute. Advocate for the person on the other side of the screen.
 ## NEVER
 
 - Start building without understanding who uses the interface (for non-trivial tasks)
+- Start visual decisions without committing to an aesthetic direction
 - Present a screen without considering all states (empty, loading, error, success)
 - Ignore mobile — if it doesn't work on a phone, it doesn't work
 - Use hover as the only way to reveal critical functionality
@@ -466,3 +669,7 @@ Don't just execute. Advocate for the person on the other side of the screen.
 - Animate `width`, `height`, `top`, `left` — use `transform` only
 - Mix naming conventions in the same project
 - Set line-height or letter-spacing without running `typography_calc.py` — always use real font metrics
+- Default to generic AI aesthetics — Inter on white, purple gradients, centered-hero + three-column template, evenly-distributed pastel palette
+- Converge on the same "safe" font or palette across projects — every design is a new opportunity to commit
+- Large refactors during a live-site review without user confirmation — minimal changes only
+- Skip responsive testing — 375, 768, 1280, 1920 before shipping any review
