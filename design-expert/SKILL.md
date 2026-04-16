@@ -167,6 +167,15 @@ a type scale. Never guess these values — the calculator uses real font metrics
 - Micro-interactions: 100-150ms. Panels: 200-300ms. Page transitions: 300-500ms.
 - Closing is always faster than opening.
 
+### Motion as Communication
+Motion is not decoration. Every animation must answer a question:
+- **Where did this come from?** (origin animation)
+- **What changed?** (state transition)
+- **Did my action work?** (feedback)
+- **What should I look at?** (attention direction)
+
+If an animation can't answer one of these, remove it.
+
 For complete token values, component specs, animation tables, and responsive patterns, see:
 - [references/visual-craft.md](references/visual-craft.md)
 - [references/design-tokens.md](references/design-tokens.md)
