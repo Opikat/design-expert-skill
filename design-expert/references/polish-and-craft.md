@@ -201,6 +201,83 @@ text, pattern, or position.
 
 ---
 
+## Mobile / React Native Patterns
+
+Native mobile needs different primitives than web: spring physics replace
+CSS easing, press feedback uses `scale` + haptics, and animation runs on
+the UI thread via Reanimated shared values. These patterns complement the
+CSS animation reference above — not replace it.
+
+### Spring Configs (Reanimated `withSpring`)
+
+```ts
+// Standard — buttons, cards, most UI motion
+const SPRING_STANDARD = { mass: 1, damping: 15, stiffness: 120 };
+
+// Modal / sheet enter — softer, slower settle
+const SPRING_MODAL = { mass: 1, damping: 20, stiffness: 90 };
+
+// Bouncy — celebratory moments only, never for routine UI
+const SPRING_BOUNCY = { mass: 1, damping: 10, stiffness: 180 };
+```
+
+### Press-Scale Values
+
+| Scale | Feel | Use for |
+|---|---|---|
+| `0.97` | Subtle | Icon buttons, list rows |
+| `0.96` | Standard | Primary CTAs, cards |
+| `0.95` | Tactile | Large hero buttons, playful UI |
+
+Pattern: `onPressIn` → `scale` target, `onPressOut` → spring back to `1.0`
+with `SPRING_STANDARD`. Never animate below `0.93` — reads as broken.
+
+### Haptics Map (`expo-haptics`)
+
+| Trigger | Haptic |
+|---|---|
+| Toggle, selection change | `Haptics.selectionAsync()` |
+| Secondary tap, tab switch | `Haptics.impactAsync(Light)` |
+| Primary CTA, confirm | `Haptics.impactAsync(Medium)` |
+| Success completion | `Haptics.notificationAsync(Success)` |
+| Destructive action confirmed | `Haptics.notificationAsync(Warning)` |
+
+Rule: fire haptic on `onPressIn`, not `onPress` — matches the visual scale.
+Respect system-level haptics-off setting; never make haptic the only feedback.
+
+### Reanimated Press Idiom
+
+```tsx
+const scale = useSharedValue(1);
+const animStyle = useAnimatedStyle(() => ({
+  transform: [{ scale: scale.value }],
+}));
+
+<Pressable
+  onPressIn={() => { scale.value = withSpring(0.96, SPRING_STANDARD);
+                     Haptics.impactAsync(ImpactFeedbackStyle.Light); }}
+  onPressOut={() => { scale.value = withSpring(1, SPRING_STANDARD); }}>
+  <Animated.View style={animStyle}>{/* ... */}</Animated.View>
+</Pressable>
+```
+
+### Neo-Brutalist Mechanical Press (NativeWind / Tailwind)
+
+No spring — offset shifts and shadow collapses for a mechanical thunk:
+```tsx
+className="shadow-[4px_4px_0_0_#000]
+           active:translate-x-[2px] active:translate-y-[2px]
+           active:shadow-none transition-none"
+```
+
+### Platform Notes
+
+- Web's `cubic-bezier(0.16, 1, 0.3, 1)` ≈ `SPRING_STANDARD` — use web easing for timing-based transitions (opacity, color), spring for spatial ones (scale, translate).
+- Never animate `width`/`height` on native either — use `scale` or `flex`.
+- Respect `AccessibilityInfo.isReduceMotionEnabled()` — fall back to opacity-only.
+
+---
+
 ## Icon Consistency Checklist
 
 - Same stroke weight across the entire set (1.5px or 2px)

@@ -59,7 +59,6 @@ CSV databases powering the search scripts:
 - `react-performance.csv` — React/Next.js performance patterns
 - `icons.csv` — icon library search database
 - `ui-reasoning.csv` — reasoning rules for style/palette selection
-- `design.csv`, `draft.csv` — working design patterns
 - `stacks/` — stack-specific guidelines (React, Next.js, Angular, Flutter, Svelte)
 
 ## Installation

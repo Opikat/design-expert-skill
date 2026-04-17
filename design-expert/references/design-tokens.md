@@ -162,6 +162,60 @@ Formula: `child-radius = parent-radius - padding`
 
 ---
 
+## Signature Gradient Recipes
+
+Named two-to-three-stop gradients for CTAs, hero surfaces, and brand accents.
+Use sparingly — one signature gradient per product, not one per component.
+For subtle button micro-gradients (same hue, ±4% lightness) see
+`polish-and-craft.md` §5.
+
+```css
+/* CTA / SaaS / fintech */
+--grad-electric-blue: linear-gradient(135deg, #0052FF 0%, #4D7CFF 100%);
+
+/* Finance / energy / bitcoin */
+--grad-bitcoin: linear-gradient(135deg, #EA580C 0%, #F7931A 100%);
+
+/* Enterprise active states / premium */
+--grad-indigo-violet: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
+
+/* Editorial / academia / luxury */
+--grad-brass: linear-gradient(135deg, #D4B872 0%, #C9A962 50%, #B8953F 100%);
+
+/* Modern dark base surface */
+--grad-dark-void: linear-gradient(180deg, #0A0A0F 0%, #020203 100%);
+```
+
+**Overlay recipes (on top of base surface, not replacing it):**
+```css
+/* Terminal / cyberpunk scanlines */
+--overlay-scanlines: repeating-linear-gradient(
+  0deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px,
+  transparent 1px, transparent 3px
+);
+
+/* Vignette for hero imagery */
+--overlay-vignette: radial-gradient(
+  ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%
+);
+```
+
+**React Native equivalent** (`react-native-linear-gradient`):
+```jsx
+<LinearGradient
+  colors={['#0052FF', '#4D7CFF']}
+  start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }}  /* 135deg */
+/>
+```
+
+**Rules:**
+- Gradient direction: `135deg` (top-left → bottom-right) is the default diagonal
+- Contrast check: text on any gradient must pass 4.5:1 against the darker stop
+- Never gradient + shadow + border — pick one depth device per element
+- Gradient text only on heroes (see `polish-and-craft.md` §8)
+
+---
+
 ## Responsive Breakpoints
 
 ```css
