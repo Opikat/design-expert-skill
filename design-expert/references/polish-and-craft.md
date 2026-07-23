@@ -201,6 +201,17 @@ text, pattern, or position.
 
 ---
 
+## Icon Consistency Checklist
+
+- Same stroke weight across the entire set (1.5px or 2px)
+- Same corner treatment (rounded or sharp — pick one)
+- Same optical size (if 24px grid, icons fill ~20px)
+- Consistent level of detail (don't mix simple and complex)
+- Pixel-snap to whole values at common sizes
+- Test at smallest rendered size to verify clarity
+
+---
+
 ## Mobile / React Native Patterns
 
 Native mobile needs different primitives than web: spring physics replace
@@ -275,14 +286,3 @@ className="shadow-[4px_4px_0_0_#000]
 - Web's `cubic-bezier(0.16, 1, 0.3, 1)` ≈ `SPRING_STANDARD` — use web easing for timing-based transitions (opacity, color), spring for spatial ones (scale, translate).
 - Never animate `width`/`height` on native either — use `scale` or `flex`.
 - Respect `AccessibilityInfo.isReduceMotionEnabled()` — fall back to opacity-only.
-
----
-
-## Icon Consistency Checklist
-
-- Same stroke weight across the entire set (1.5px or 2px)
-- Same corner treatment (rounded or sharp — pick one)
-- Same optical size (if 24px grid, icons fill ~20px)
-- Consistent level of detail (don't mix simple and complex)
-- Pixel-snap to whole values at common sizes
-- Test at smallest rendered size to verify clarity
