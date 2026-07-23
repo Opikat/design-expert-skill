@@ -162,6 +162,21 @@ Formula: `child-radius = parent-radius - padding`
 
 ---
 
+## Responsive Breakpoints
+
+```css
+--bp-sm: 640px;    /* mobile landscape */
+--bp-md: 768px;    /* tablet portrait */
+--bp-lg: 1024px;   /* tablet landscape / small desktop */
+--bp-xl: 1280px;   /* desktop */
+--bp-2xl: 1536px;  /* large desktop */
+```
+
+Container max-widths: 640px (narrow), 768px (reading), 1024px (app),
+1280px (wide app), 1536px (dashboard)
+
+---
+
 ## Signature Gradient Recipes
 
 Named two-to-three-stop gradients for CTAs, hero surfaces, and brand accents.
@@ -213,18 +228,3 @@ For subtle button micro-gradients (same hue, ±4% lightness) see
 - Contrast check: text on any gradient must pass 4.5:1 against the darker stop
 - Never gradient + shadow + border — pick one depth device per element
 - Gradient text only on heroes (see `polish-and-craft.md` §8)
-
----
-
-## Responsive Breakpoints
-
-```css
---bp-sm: 640px;    /* mobile landscape */
---bp-md: 768px;    /* tablet portrait */
---bp-lg: 1024px;   /* tablet landscape / small desktop */
---bp-xl: 1280px;   /* desktop */
---bp-2xl: 1536px;  /* large desktop */
-```
-
-Container max-widths: 640px (narrow), 768px (reading), 1024px (app),
-1280px (wide app), 1536px (dashboard)

@@ -25,18 +25,28 @@ Activates for any design-related task: building distinctive interfaces, reviewin
 - **Live-site review workflow** — 6-step loop (gather → inspect → prioritize → fix → re-verify → report) at mobile/tablet/desktop/wide viewports
 - **Framework-specific fix patterns** — Pure CSS, SCSS, Tailwind, CSS Modules, styled-components/Emotion, Vue scoped styles, Next.js App Router
 
+## Profiles — layering a brand on top
+
+This skill is brand-agnostic by design — it owns the *process* (understanding the user, diverging into real alternatives before committing, the anti-generic-AI checks, accessibility floors) but has no opinion about any single brand's colors or fonts.
+
+A **profile** is a separate, small doc or skill that supplies one brand's specifics: palette, typefaces, spacing personality, a signature visual device, format defaults, workflow and tooling. Load this skill first, the profile second — the profile enters the process as the "existing system" the base works from.
+
+**A profile can change:** tokens and identity, typography roles and size floors per medium, format/layout defaults, component or diagram vocabulary, copy tone, workflow and medium, which signature move the brand owns.
+
+**A profile can never change:** the process itself (diverge-before-converge, understanding the user first), the banned generic-AI starting points, accessibility floors, flow/diagram readability, the one-signature rule. A profile may only *tighten* these, never loosen them.
+
+Say a profile pins a fintech client's palette to navy plus two neutrals, with a single display face reserved for headlines only — this skill still forces three genuinely different directions before any pixel gets committed, still runs the typography calculator for real line-height values, still checks the result against the banned-defaults list below. The profile decides *what it looks like*; this skill decides *how it gets there*.
+
 ## Reference library
 
-11 deep-reference files loaded on demand:
+10 deep-reference files loaded on demand:
 
-- `ux-strategy.md` — cognitive load, visual hierarchy, feedback loops, IA patterns
-- `visual-craft.md` — complete token scales, component specs, responsive patterns
-- `aesthetic-direction.md` — 12-direction catalog, execution guidelines, anti-patterns to avoid generic AI aesthetics
-- `design-tokens.md` — spacing, color, type, shadow, radius CSS custom properties
-- `component-library.md` — buttons, inputs, cards, tables, modals, navigation
-- `polish-and-craft.md` — animation timing tables, polish techniques, responsive specs
-- `patterns-and-flows.md` — cross-industry patterns, onboarding, checkout, empty states
-- `psychology-deep-dive.md` — decision architecture, emotional design, motion psychology
+- `aesthetic-derivation.md` — the uniqueness engine: derive a distinctive direction from product context (rank three brand adjectives → mine the product's physical-world artifacts → extract transferable properties), typography voices, layout structures beyond the centered stack, color logic, material-transfer-by-industry, the asset library map, and background/visual-detail techniques
+- `design-tokens.md` — spacing, color, type, shadow, radius CSS custom properties + signature gradient recipes
+- `component-library.md` — buttons, inputs, cards, tables, modals, navigation, badges, toasts
+- `polish-and-craft.md` — animation timing tables, polish techniques, responsive specs, and mobile/React Native (Reanimated) patterns
+- `patterns-and-flows.md` — pattern selection library stating when each works, fails, and is misused: onboarding, auth, forms, checkout, e-commerce, search, navigation, dashboards, settings, empty states, destructive actions, notifications, cross-industry transfer
+- `psychology-deep-dive.md` — decision psychology: worked principle-conflicts, same-brief-different-answers, persuasion mechanics and their ethical line, animation timing
 - `naming-conventions.md` — Client First and BEM naming rules with examples
 - `ux-rules-reference.md` — full 99-rule reference with implementation details
 - `visual-checklist.md` — exhaustive visual inspection checklist for live-site review
@@ -64,11 +74,17 @@ CSV databases powering the search scripts:
 ## Installation
 
 ```bash
-# In Claude Code
-/install-skill https://github.com/Opikat/design-expert-skill
+git clone https://github.com/Opikat/design-expert-skill.git
+cp -r design-expert-skill/design-expert ~/.claude/skills/design-expert
 ```
 
-Or drop the `design-expert/` folder into your Claude Code skills directory.
+That's the whole install: the skill is self-contained (SKILL.md + references + data + scripts) and activates automatically on design-related tasks in Claude Code. For a single project instead of globally, copy the folder to `<project>/.claude/skills/design-expert`.
+
+**Requirements:** Python 3 on PATH for the two scripts (`search.py`, `typography_calc.py`) — standard library only, nothing to pip-install.
+
+### Setting up a profile
+
+The skill ships brand-agnostic. To layer your brand (or a client's) on top, copy [`profiles/PROFILE-TEMPLATE.md`](profiles/PROFILE-TEMPLATE.md), fill in the brackets, and save it either as its own skill (`~/.claude/skills/<brand>-visuals/SKILL.md`) or as a doc your project's CLAUDE.md tells Claude to load after design-expert. Load order is fixed: base first, profile second — see "Profiles — layering a brand on top" above for the override contract.
 
 ## Credits
 
