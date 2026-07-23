@@ -74,11 +74,17 @@ CSV databases powering the search scripts:
 ## Installation
 
 ```bash
-# In Claude Code
-/install-skill https://github.com/Opikat/design-expert-skill
+git clone https://github.com/Opikat/design-expert-skill.git
+cp -r design-expert-skill/design-expert ~/.claude/skills/design-expert
 ```
 
-Or drop the `design-expert/` folder into your Claude Code skills directory.
+That's the whole install: the skill is self-contained (SKILL.md + references + data + scripts) and activates automatically on design-related tasks in Claude Code. For a single project instead of globally, copy the folder to `<project>/.claude/skills/design-expert`.
+
+**Requirements:** Python 3 on PATH for the two scripts (`search.py`, `typography_calc.py`) — standard library only, nothing to pip-install.
+
+### Setting up a profile
+
+The skill ships brand-agnostic. To layer your brand (or a client's) on top, copy [`profiles/PROFILE-TEMPLATE.md`](profiles/PROFILE-TEMPLATE.md), fill in the brackets, and save it either as its own skill (`~/.claude/skills/<brand>-visuals/SKILL.md`) or as a doc your project's CLAUDE.md tells Claude to load after design-expert. Load order is fixed: base first, profile second — see "Profiles — layering a brand on top" above for the override contract.
 
 ## Credits
 
