@@ -127,6 +127,29 @@ consistent values across the existing codebase. If signals are ambiguous, ask:
   addition as a system-consistent extension and LABEL it as a proposal ("this
   adds a 64px display size, following the existing 1.25 ratio") so the owner can
   accept or reject it. Never extend silently.
+- **Mode T — Translating a brand into a product:** brand guidelines exist but no
+  product system does. This is the most common client situation and it is NOT
+  Mode B, because brand systems are built for large, low-density, high-impact
+  moments. Applied literally to a dense UI they break: the 88px display has no
+  role, the high-chroma brand color fails contrast as text, and the generous
+  marketing rhythm makes a data table painful. Complying literally and ignoring
+  the brand are both wrong. Write the mapping FIRST, then treat the mapping as
+  Mode B law. The mapping is the deliverable, and it is what nobody has written:
+
+  | Brand primitive | Product role |
+  |---|---|
+  | Brand color | accent only, plus a derived variant that passes AA as text |
+  | Display face | page titles and marketing surfaces; never UI labels or data |
+  | Type scale | inherit the brand's RATIO, not its sizes — compress for density |
+  | Spacing rhythm | divide down for interface density, keep the proportions |
+  | Brand voice | a product register: shorter, more literal, no wordplay in errors |
+
+**The useful inversion in Mode B.** In a mature system the scarce contribution is
+not aesthetic direction, it is coverage. Where does the system stop reaching?
+Which states are undocumented? What has been rebuilt three times because no
+primitive exists? What still has no dark mode? For a design-led team that
+analysis is worth more than another screen, and it plays to systematic work
+rather than perceptual judgement — offer it before offering visuals.
 
 **When the system conflicts with craft** (a brand color that fails AA contrast,
 a spacing scale with gaps): flag the conflict and propose the fix — don't
@@ -247,6 +270,52 @@ least three in every design and be able to point at what you did instead:
 The defaults aren't evil — reaching for them WITHOUT a contextual reason is how
 every design converges to the same design.
 
+### Measured defaults — the values, not the vibes
+
+The table above is qualitative. These are the exact values that arrive unprompted,
+measured by the three-blank-brief method: one vague sentence per surface, three
+independent sessions, no skills or references attached, then diff what all three
+produced. Counts are runs-out-of-three. **Measured 2026-07-30 on Sonnet 5;
+re-derive by 2026-10-30 and after any model update** — the middle moves, and a
+stale list reads as coverage while missing the current default.
+
+| Where | What arrives by itself |
+|---|---|
+| Body face | Inter, every surface (3/3); a mono face for numerals (2/3) |
+| Palette | unmodified Tailwind — `#4F46E5`, `#16A34A`/`#DCFCE7`, `#D97706`/`#FEF3C7`, `#DC2626`/`#FEE2E2` (identical hexes 2/3; `#DC2626` 3/3) |
+| Ink / border / wash | `#14171F`, `#E3E6ED`, `#F6F7FB`, within ±2 per channel (3/3) |
+| Radius set | app `6 8 12 999` (3/3 identical); marketing `6 10 14–16 999` (3/3) |
+| Marketing grid | 12 columns, 1200 max-width, 96 section padding, 12 related gap (3/3) |
+| App shell | 240 sidebar, 64 top bar, 32 padding → 1136 content, 740 chart beside a 372 panel, 56 row height (3/3) |
+| Icons | Lucide at 1.5px stroke — 24 feature, 20 nav, 16 inline (3/3) |
+| Motion | `cubic-bezier(0.16, 1, 0.3, 1)`, 400ms, translateY 12–16px (3/3); 40ms stagger; toast held 4000ms |
+| Measure | 65 characters / 600–640px (3/3) |
+| Dark mode | near-black blue canvas plus one step lighter surface (3/3); absent entirely on marketing (3/3) |
+| Reflexes of escape | a serif display over an Inter body (2/3); warm paper `#F5F3EE`–`#FAF8F5` (3/3); a texture at exactly 4% opacity (2/3); one small geometric mark (3/3) |
+
+The last row is the load-bearing one: banning the rows above lands there, so it
+is banned too. A ban only moves the answer down the ranking — the replacement has
+to be derived (Step 2) or chosen (Step 5), never defaulted.
+
+### The banned skeletons
+
+Structure survives every token swap, so it is the part a reader recognizes first.
+Each of these came back identical from three independent sessions:
+
+- **Marketing page.** Nav (logo left, links centre, log-in plus button right,
+  sticky with a hairline appearing on scroll) → hero (kicker chip, headline,
+  subhead, primary plus secondary, trust microcopy, screenshot in browser chrome)
+  → logo strip → three feature cards → three how-it-works steps → testimonial →
+  three pricing tiers with the middle one elevated → FAQ accordion → dark CTA
+  band → footer.
+- **App dashboard.** 240 sidebar with the account block bottom-left → top bar with
+  search, bell and avatar → four stat cards → one wide chart beside a narrow
+  panel → table reading link, avatar-plus-name, two dates, right-aligned amount,
+  status badge, kebab.
+- **Explainer diagram.** A four-band layered stack running foundation → parts →
+  patterns → surface, with a tint ramp up the bands. This arrived 3/3 for a brief
+  that named no device at all, so any four-tier stack now needs an argument.
+
 ## Step 5: Diverge Before You Converge
 
 For any new design (not small edits), generate THREE genuinely different
@@ -276,6 +345,27 @@ In **Mode B**, the three directions vary on layout structure, density, scale
 contrast, and art direction — never on tokens. Three directions that differ only
 by which brand color leads are one direction. Small edits inherit the existing
 direction and skip divergence.
+
+### The divergence ledger — carries into the build
+
+Step 5 diverges once, at the top. Every decision after it can slide back to the
+default while still feeling chosen, so name the default at each major decision and
+record what replaced it. One entry per decision, written as you go, not
+reconstructed afterwards:
+
+> **Hero** — Default: centered, pill badge, headline + subhead + two CTAs, gradient
+> blur behind. Instead: left-aligned type block at 60% width, no badge, no subhead,
+> the headline carrying the page, one text link.
+> **Feature section** — Default: three-column icon grid in rounded cards. Instead:
+> numbered editorial list at full measure, rules between items, no icons.
+> **Labels** — Default: 11px uppercase mono, letterspaced. Instead: sentence case at
+> body size, weight difference only.
+
+Naming the default IS the mechanism — unnamed, it gets reproduced by a process
+that believes it chose. The ledger is also the fastest review artifact available:
+read it in thirty seconds, and if an entry says "Instead: the same thing with more
+spacing", there are no decisions in the work yet regardless of how finished the
+render looks. Deliver it alongside the design. Small edits skip it.
 
 ### Learn principles, not styles
 
@@ -513,6 +603,20 @@ matches emotional state (calm for errors, brief for success). For a deep
 microcopy pass — full error/empty-state/onboarding copy or a copy audit — hand
 off to a dedicated UX-copywriting skill if one is available in the environment.
 
+**Banned strings.** These arrive verbatim and near-identically across independent
+sessions (measured, see Step 4), so they carry no decision: the empty state `No
+invoices yet` plus `Create your first invoice to start getting paid — it takes
+less than two minutes.`; a stat row reading `Outstanding · Overdue · Paid this
+month · Drafts`; the error template `Couldn't <verb>. Check your connection and
+try again.`; the button set `Get started free` / `See how it works` / `Talk to
+sales` / `View all` / `Export`; the three-clause value subhead `<verb> in
+minutes, <verb> online, and <benefit>`; a negation-pair headline (`X, not Y`);
+any descriptor written as exactly three nouns. Swap the domain noun and the
+pattern is unchanged, so ban the shape rather than the vocabulary. Instead: name
+the specific next action with its object in the empty state, name what actually
+failed in the error, and let the count of items in a list be whatever the product
+has — three is a coincidence, not a structure.
+
 ## Step 15: Accessibility (Non-Negotiable)
 
 Retrofitting accessibility costs far more than building it in. Bake in:
@@ -558,6 +662,7 @@ Run all three checklists before presenting. Fix failures first.
 - [ ] **Signature test:** exactly one ownable element a user might remember tomorrow?
 - [ ] **Template test:** dropped into a default admin template, would this look native? If yes, the direction was executed too timidly — turn the signature up, don't add elements.
 - [ ] **Banned-list test:** did any Step 4 reflex survive without an argued reason?
+- [ ] **Null-signature test:** is the signature you would name one of the measured hygiene moves — tabular figures, a status colour bled out of its badge into the cell, a tint ramp so "colour carries the argument", reserving the one green for success, oversized low-contrast numerals beside numbered steps, elevating the middle pricing card? Each arrived 2–3/3 unprompted from blank briefs. Do them, but do not count them; name a signature the default did not supply.
 
 ### Audit format (for reviewing existing interfaces)
 
