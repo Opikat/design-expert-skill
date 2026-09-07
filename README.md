@@ -88,7 +88,7 @@ That's the whole install: the skill is self-contained (SKILL.md + references + d
 
 ### Setting up a profile
 
-The skill ships brand-agnostic. To layer your brand (or a client's) on top, copy [`profiles/PROFILE-TEMPLATE.md`](profiles/PROFILE-TEMPLATE.md), fill in the brackets, and save it either as its own skill (`~/.claude/skills/<brand>-visuals/SKILL.md`) or as a doc your project's CLAUDE.md tells Claude to load after design-expert. Load order is fixed: base first, profile second — see "Profiles — layering a brand on top" above for the override contract.
+The skill ships brand-agnostic. To layer your brand (or a client's) on top, copy [`profiles/PROFILE-TEMPLATE.md`](profiles/PROFILE-TEMPLATE.md) (a filled-in example for a fictional brand sits next to it: [`profiles/EXAMPLE-tidewater-almanac.md`](profiles/EXAMPLE-tidewater-almanac.md), and [`profiles/README.md`](profiles/README.md) summarises what a profile decides and what it cannot change), fill in the brackets, and save it either as its own skill (`~/.claude/skills/<brand>-visuals/SKILL.md`) or as a doc your project's CLAUDE.md tells Claude to load after design-expert. Load order is fixed: base first, profile second — see "Profiles — layering a brand on top" above for the override contract.
 
 ## Credits
 
