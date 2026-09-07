@@ -40,6 +40,9 @@ Your job is to select the right depth for the task — **scale to scope**:
 | **Design-system generation** (palettes, font pairings, style match) | Run the Python search scripts (see "Design System Generator"). |
 | **Typography values** (line-height, tracking, type scale) | **ALWAYS** run `typography_calc.py` — never guess type values. |
 | **Naming** (CSS classes, components) | Apply "Naming Conventions". |
+| **Shaping a section** (how a set of links, a sequence, a comparison, a proof is composed) | Name the job, then choose from `references/section-patterns.md` — never default to a card grid. |
+| **Choosing a motion element** (what animates, not how fast) | Name the job, then choose from `references/motion-patterns.md`; write the reduced-motion end state first. |
+| **Stuck, or the first idea arrived too fast** | Name 2–3 specific places to look and the question to ask at each — `references/reference-sources.md` — and offer to capture them side by side. |
 
 The numbered steps are a checklist of what expert work considers, not a script
 to recite. A quick fix gets a one-sentence strategy; a new product page gets
@@ -86,6 +89,20 @@ off-brand craft. Both are failures.
   may TIGHTEN them, never loosen them.
 - **Accessibility floors (Step 15)** and legibility minimums.
 - **Flow/diagram readability:** zero connector crossings, no overlapping labels.
+- **Diagram composition floor** (any diagram artifact — HTML/SVG, slides, docs):
+  a complexity budget of max 9 nodes / 12 edges per diagram — over budget, split
+  into overview + detail and say what moved (the split is proposed to the human,
+  never silently applied); exactly 1–2 focal elements carrying the diagram's one
+  strong accent — category-coloring every node erases the signal (a legend is
+  not hierarchy); spacing and type sizes from an enumerated scale, never
+  eyeballed — if a profile publishes lists, use them; otherwise fix a small set
+  (e.g. gaps {16, 24, 32, 40}px at UI scale) before drawing. Line style stays
+  semantic (dashed = dependency); emphasis is expressed by weight, never by
+  restyling the line. **No profile loaded → use the default diagram style and
+  its variants** (`references/diagram-default-style.md`): before building,
+  offer the human 2–3 fitting variants (Editorial / Sketchy / Terminal,
+  ± annotation callouts) with a one-line reason each — never just improvise
+  a look.
 - **The execution floor and the one-signature rule.**
 
 **Conflict rule:** on WHAT (values) the profile wins; on HOW (process) and on
@@ -246,6 +263,24 @@ deliberate, argued-for choice against a considered alternative.
 | Settings as a flat list | Group by user task, most-changed at top, search if large |
 | Feature-first landing copy | Outcome-first: what the user's life looks like after |
 
+### Composition defaults (the section-level reflex)
+
+The same convergence happens one level down, when a section gets its shape.
+"Cards in a row" is the default answer to nine different jobs and the right
+answer to about two. Before shaping any section, name its **job** and choose
+from the vocabulary in
+[section-patterns.md](references/section-patterns.md) — the full table of jobs,
+patterns, and failure conditions:
+
+| Your default | Name the job, then consider |
+|---|---|
+| Card grid for a set of links | Index register, list-with-preview, bento (only with real hierarchy), relational map |
+| Three equal columns of features | Ruled manifest, grouped columns, progressive scope |
+| Checkmark list | Ticks only if something is genuinely unticked; otherwise hairline markers |
+| Numbered steps as separate boxes | One connected path through the steps |
+| Testimonial cards | Pull-quotes on a rail, or one result figure with a caption |
+| Static hero object | An element from [motion-patterns.md](references/motion-patterns.md), if it answers a question |
+
 ### The banned visual starting point
 
 There is a recognizable "AI-generated look" born of convergence on the
@@ -388,6 +423,25 @@ shapes; a Stripe-inspired bakery checkout uses clarity with WARM tones and
 FRIENDLY type. If a viewer could name the product you copied, you copied the
 identity, not the principle.
 
+### Go and look (don't design from memory)
+
+Working from recall reproduces whatever you saw most, which is why unaided
+ideation converges. When a direction is unclear, or when the first idea arrives
+suspiciously fast, name **two or three specific places to look and the question
+to ask at each** — then offer to go and capture them rather than describing from
+memory. Sources by need, and the capture-and-compare routine:
+[reference-sources.md](references/reference-sources.md).
+
+> For the section that routes to other pages: an editorial index register (how
+> do the meta column and hairlines do the work a card would?), a
+> list-with-preview (what happens when the preview is empty?), a relational map
+> (are the connections real or decorative?). Want these pulled live and laid out
+> side by side?
+
+Present references as a small comparison board with one line on each mechanism —
+vocabulary is built by seeing alternatives next to each other, not one tab at a
+time. References inform the work and never appear in it.
+
 ---
 
 # PART II — DESIGN
@@ -422,11 +476,22 @@ read [references/psychology-deep-dive.md](references/psychology-deep-dive.md).
 
 Patterns are context-dependent — the same pattern that's best-in-class in one
 product is a mistake in another. Never recommend one without knowing when it
-fails. Before picking a pattern for onboarding, auth, checkout, search,
-navigation, dashboards, settings, forms, notifications, empty states, or
-destructive actions, read
-[references/patterns-and-flows.md](references/patterns-and-flows.md) — each entry
-states when the pattern works, when it fails, and how it's misused.
+fails. Three vocabularies, by what you are choosing:
+
+| Choosing… | Read |
+|---|---|
+| A **flow** — onboarding, auth, checkout, search, navigation, dashboards, settings, forms, notifications, empty states, destructive actions | [patterns-and-flows.md](references/patterns-and-flows.md) |
+| A **section's shape** — how a set of links, a sequence, a comparison, a proof, an objection, a hero is composed | [section-patterns.md](references/section-patterns.md) |
+| A **motion element** — entrance, scroll progress, pointer response, state change, ambient, view transition, value change | [motion-patterns.md](references/motion-patterns.md) |
+
+Each entry states when the pattern works, when it fails, and how it's misused.
+
+**Name the job before the shape.** Every section does exactly one job; say which
+("this routes people elsewhere", "this handles the why-not-Wix doubt") before
+reaching for a layout. Shape asserts a relationship — equal columns say "peers",
+unequal tiles say "ranked", a connected path says "sequence". If the assertion
+isn't true of the content, the pattern is wrong however good it looks. A section
+doing two jobs does neither; split it.
 
 **Cross-industry transfer (the creativity engine):** the most original solutions
 come from adjacent industries solving the same underlying problem. Strip the
@@ -580,6 +645,20 @@ it answers none, cut it.
   jank). Design every interactive element in all its states.
 - Scale ceremony inversely with frequency: first-time delight, hundredth-time
   invisible.
+
+**Which element, not just how fast.** The rules above govern execution; the
+choice of motion element is its own decision, made the same way as a section's
+shape — name the job (entrance, scroll progress, pointer response, state change,
+ambient, view transition, value change), then pick two candidates from
+[references/motion-patterns.md](references/motion-patterns.md) and reject on
+failure conditions. That file also carries the implementation ladder: CSS first,
+then native scroll-driven animations and View Transitions, then a little vanilla
+JS, and only then a library — reaching for an animation runtime to fade
+something in is a tell.
+
+**Write the reduced-motion end state before building the motion.** If you cannot
+describe what the element looks like standing still, the pattern isn't finished.
+A static hero is not a failure — an animated element that answers no question is.
 
 ## Step 13: Apply Polish
 
@@ -821,6 +900,13 @@ Priority-ordered checks; full details in
   edge cases) — real users spend most of their time in the states you didn't design.
 - **Never present a design you can't derive** — if no context fact explains a
   choice, it's a default.
+- **Never shape a section without naming its job and offering an alternative** —
+  present the chosen pattern against at least one rejected candidate and the
+  failure condition that ruled it out. The first shape that comes to hand is the
+  most-seen shape, not the fittest one.
+- **Never leave motion unchosen by default** — a static element is a decision to
+  be stated, not the absence of one; and an animated element that answers no
+  reader question gets cut.
 - **Never ignore mobile; never make hover the only reveal; never bury essential
   navigation; never build a flow without an escape route at every step.**
 - **No random spacing / arbitrary type sizes** — systems create the unconscious

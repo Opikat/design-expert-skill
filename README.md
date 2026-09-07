@@ -39,12 +39,16 @@ Say a profile pins a fintech client's palette to navy plus two neutrals, with a 
 
 ## Reference library
 
-10 deep-reference files loaded on demand:
+14 deep-reference files loaded on demand:
 
 - `aesthetic-derivation.md` — the uniqueness engine: derive a distinctive direction from product context (rank three brand adjectives → mine the product's physical-world artifacts → extract transferable properties), typography voices, layout structures beyond the centered stack, color logic, material-transfer-by-industry, the asset library map, and background/visual-detail techniques
 - `design-tokens.md` — spacing, color, type, shadow, radius CSS custom properties + signature gradient recipes
 - `component-library.md` — buttons, inputs, cards, tables, modals, navigation, badges, toasts
 - `polish-and-craft.md` — animation timing tables, polish techniques, responsive specs, and mobile/React Native (Reanimated) patterns
+- `section-patterns.md` — composition vocabulary by job: name what a section does (routes elsewhere, handles a doubt, shows a sequence, proves a claim) before choosing its shape; each pattern lists its failure conditions
+- `motion-patterns.md` — motion element vocabulary by job (entrance, scroll progress, pointer response, state change, ambient, view transition, value change) plus the implementation ladder: CSS first, a library last
+- `reference-sources.md` — where to go look, by need: two or three specific places and the question to ask at each, and the capture-and-compare routine, instead of designing from memory
+- `diagram-default-style.md` — the fallback diagram language when no brand profile is loaded: complexity budget (9 nodes / 12 edges), one or two focal elements, enumerated spacing and type scales, Editorial / Sketchy / Terminal variants
 - `patterns-and-flows.md` — pattern selection library stating when each works, fails, and is misused: onboarding, auth, forms, checkout, e-commerce, search, navigation, dashboards, settings, empty states, destructive actions, notifications, cross-industry transfer
 - `psychology-deep-dive.md` — decision psychology: worked principle-conflicts, same-brief-different-answers, persuasion mechanics and their ethical line, animation timing
 - `naming-conventions.md` — Client First and BEM naming rules with examples
