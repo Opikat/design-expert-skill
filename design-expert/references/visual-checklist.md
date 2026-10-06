@@ -1,5 +1,7 @@
 # Visual Inspection Checklist
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 This document is a comprehensive checklist of items to verify during web design visual inspection.
 
 ---

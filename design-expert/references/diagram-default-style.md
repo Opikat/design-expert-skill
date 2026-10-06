@@ -1,5 +1,7 @@
 # Diagram Default Style (no brand profile loaded)
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 The fallback visual language for diagram artifacts (HTML/SVG explainers, doc
 diagrams, slide schematics) when NO brand profile is loaded. A loaded profile's
 tokens always win — this file exists so that "no profile" never means "improvise".

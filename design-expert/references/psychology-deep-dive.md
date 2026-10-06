@@ -1,5 +1,7 @@
 # Decision Psychology for UX
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 How to APPLY psychological principles when they collide with each other and
 with reality. Read when a design decision is non-obvious or two principles
 point in opposite directions.
@@ -189,7 +191,7 @@ Rules:
 
 CSS easing values:
 ```css
---ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+--ease-out: cubic-bezier(0.2, 0, 0, 1); /* example; the default cubic-bezier(0.16, 1, 0.3, 1) is banned — SKILL.md Step 4 */
 --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
 --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 --spring: cubic-bezier(0.34, 1.56, 0.64, 1);

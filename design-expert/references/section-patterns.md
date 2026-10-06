@@ -1,5 +1,7 @@
 # Section Patterns: Composition Vocabulary by Job
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 A page is a sequence of sections, and every section does exactly one **job**.
 Name the job first, then choose the shape — because "cards in a row" is the
 default answer to nine different jobs, and it is the right answer to about two
@@ -12,7 +14,7 @@ looking like the same landing page.
 ## How to use this file
 
 1. Say the job out loud: *this section routes people elsewhere* / *this section
-   proves I can be trusted* / *this section handles the "why not Wix" doubt*.
+   proves I can be trusted* / *this section handles the "why not a cheaper alternative" doubt*.
 2. Read that job's entries. Pick **two** candidates that fit the content you
    actually have — one conventional, one that costs more attention but earns
    more.

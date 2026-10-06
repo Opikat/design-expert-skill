@@ -1,0 +1,436 @@
+
+######## claude-fable-5-1
+
+=== dashboard-1.html (27041 bytes)
+  fonts: [('-apple-system', 1)]
+  google_fonts: []
+  hex_top: [('3B5BDB', 7), ('2F9E6A', 2), ('D9822B', 2), ('D64545', 2), ('F7B267', 2), ('FAFBFD', 2), ('7E57C2', 2), ('C6D0F5', 2), ('F4F6FA', 1), ('FFFFFF', 1), ('E4E8EF', 1), ('1A2233', 1)]
+  tailwind_hits: []
+  radius: [('8px', 4), ('999px', 4), ('50%', 4), ('10px', 2), ('9px', 1), ('var(--radius)', 1)]
+  bezier: []
+  ease_words: [('linear', 7)]
+  durations: [('15s', 3)]
+  translateY: []
+  max_width: [('1200px', 1), ('860px', 1), ('560px', 1)]
+  widths: [('280px', 1)]
+  grid_cols: [('1fr', 3), ('250px 1fr', 1), ('repeat(4, 1fr)', 1), ('2fr 1fr', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 7
+  serif: True
+  empty_strings: []
+  h1h2: ['Dashboard', 'Good morning, Elena']
+  sections: ['sidebar', 'nav', 'header', 'main', 'stats', 'row-2', 'row-3']
+  cta_words: []
+  kpi: 30
+
+=== dashboard-2.html (29053 bytes)
+  fonts: [('-apple-system', 1), ('inherit', 1)]
+  google_fonts: []
+  hex_top: [('F59E0B', 3), ('6B7280', 2), ('6366F1', 2), ('EF4444', 2), ('C7D2FE', 2), ('FAFBFD', 2), ('0EA5E9', 2), ('10B981', 2), ('8B5CF6', 2), ('F4F6FA', 1), ('FFFFFF', 1), ('E6E9F0', 1)]
+  tailwind_hits: ['10B981', '16A34A', '4F46E5', '6366F1', '8B5CF6', 'D97706', 'DC2626', 'DCFCE7', 'EF4444', 'F59E0B', 'FEE2E2', 'FEF3C7']
+  radius: [('8px', 5), ('999px', 5), ('50%', 4), ('6px', 2), ('10px', 1), ('4px', 1)]
+  bezier: []
+  ease_words: [('linear', 8)]
+  durations: [('15s', 3)]
+  translateY: []
+  max_width: [('420px', 1), ('22px', 1), ('1100px', 1), ('820px', 1)]
+  widths: []
+  grid_cols: [('1fr', 3), ('240px 1fr', 1), ('repeat(4, 1fr)', 1), ('2fr 1fr', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 8
+  serif: True
+  empty_strings: []
+  h1h2: ['Dashboard', 'Revenue Overview', 'Top Products', 'Recent Orders', 'Recent Activity']
+  sections: ['sidebar', 'nav', 'topbar', 'content', 'stats', 'grid-2', 'grid-2']
+  cta_words: []
+  kpi: 25
+
+=== dashboard-3.html (31730 bytes)
+  fonts: [('-apple-system', 1), ('inherit', 1)]
+  google_fonts: []
+  hex_top: [('4F46E5', 5), ('111827', 3), ('F59E0B', 3), ('1F2937', 2), ('6B7280', 2), ('D1D5DB', 2), ('8B5CF6', 2), ('9CA3AF', 2), ('06B6D4', 2), ('F3F4F6', 2), ('C7D2FE', 2), ('F4F6FA', 1)]
+  tailwind_hits: ['10B981', '16A34A', '3B82F6', '4F46E5', '6366F1', '64748B', '8B5CF6', 'D97706', 'DC2626', 'DCFCE7', 'EF4444', 'F59E0B', 'FEE2E2', 'FEF3C7']
+  radius: [('999px', 5), ('8px', 4), ('50%', 3), ('10px', 3), ('9px', 2), ('5px', 1)]
+  bezier: []
+  ease_words: [('linear', 7)]
+  durations: [('15s', 5)]
+  translateY: []
+  max_width: [('1200px', 1), ('960px', 1), ('600px', 1)]
+  widths: [('200px', 1)]
+  grid_cols: [('1fr', 3), ('2fr 1fr', 2), ('250px 1fr', 1), ('repeat(4, 1fr)', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 7
+  serif: True
+  empty_strings: []
+  h1h2: ['Good morning, Elena', 'Revenue overview', 'Traffic sources', 'Recent orders', 'Activity']
+  sections: ['sidebar', 'nav', 'header', 'main', 'stats', 'grid-2', 'grid-3']
+  cta_words: []
+  kpi: 31
+
+=== diagram-1.html (10243 bytes)
+  fonts: [('-apple-system', 1)]
+  google_fonts: []
+  hex_top: [('FFFFFF', 13), ('616E7C', 5), ('1F2933', 4), ('D9480F', 4), ('FFD8A8', 4), ('FCC2D7', 4), ('C0B0F5', 3), ('F8F9FA', 3), ('495057', 3), ('3E4C59', 2), ('9AA5B1', 2), ('7048E8', 2)]
+  tailwind_hits: []
+  radius: [('16px', 1)]
+  bezier: []
+  ease_words: []
+  durations: []
+  translateY: []
+  max_width: [('1100px', 1)]
+  widths: []
+  grid_cols: []
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 0
+  serif: True
+  empty_strings: []
+  h1h2: []
+  sections: []
+  cta_words: []
+  kpi: 0
+
+=== diagram-2.html (12902 bytes)
+  fonts: [('-apple-system', 1)]
+  google_fonts: []
+  hex_top: [('161A26', 13), ('4F6DF5', 9), ('C9D2F2', 6), ('6B7280', 5), ('9AA3B8', 3), ('F4F5F9', 2), ('D9DDE8', 2), ('EEF1FB', 2), ('C7CDDA', 2), ('E3E6EE', 2), ('E6F7EC', 2), ('15803D', 2)]
+  tailwind_hits: ['EF4444']
+  radius: []
+  bezier: []
+  ease_words: []
+  durations: []
+  translateY: []
+  max_width: [('1200px', 1)]
+  widths: []
+  grid_cols: []
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 0
+  serif: True
+  empty_strings: []
+  h1h2: []
+  sections: []
+  cta_words: []
+  kpi: 0
+
+=== diagram-3.html (15649 bytes)
+  fonts: [('Inter', 1), ('inherit', 1)]
+  google_fonts: []
+  hex_top: [('2A3040', 33), ('0F1117', 20), ('C9CFDC', 18), ('FF7E9D', 16), ('4FD1C5', 11), ('7AA2FF', 10), ('8B93A7', 8), ('C08CFF', 8), ('F6B73C', 7), ('E8EBF2', 4), ('161A23', 3), ('FFFFFF', 2)]
+  tailwind_hits: []
+  radius: []
+  bezier: []
+  ease_words: [('linear', 1)]
+  durations: [('1.6s', 1)]
+  translateY: []
+  max_width: [('1040px', 1)]
+  widths: []
+  grid_cols: []
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 0
+  serif: True
+  empty_strings: []
+  h1h2: []
+  sections: []
+  cta_words: []
+  kpi: 0
+
+=== marketing-1.html (18666 bytes)
+  fonts: [('Inter', 1)]
+  google_fonts: []
+  hex_top: [('0B0F1A', 4), ('111827', 1), ('161F33', 1), ('F1F5F9', 1), ('94A3B8', 1), ('6EE7B7', 1), ('38BDF8', 1), ('86EFC9', 1), ('2A3448', 1), ('1E2A40', 1), ('F472B6', 1), ('FB923C', 1)]
+  tailwind_hits: ['F1F5F9']
+  radius: [('10px', 4), ('50%', 3), ('999px', 2), ('var(--radius)', 2), ('8px', 1), ('6px', 1)]
+  bezier: []
+  ease_words: [('linear', 5), ('ease', 5)]
+  durations: [('15s', 3), ('2s', 2)]
+  translateY: [('-1px', 1), ('-3px', 1), ('-8px', 1), ('-11px', 1)]
+  max_width: [('820px', 1), ('600px', 1), ('960px', 1), ('620px', 1)]
+  widths: []
+  grid_cols: [('repeat(3, 1fr)', 3), ('1fr', 3), ('200px 1fr', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 7
+  serif: True
+  empty_strings: []
+  h1h2: ['Invoicing that  runs itself  so you can ', 'Everything between "work done" and "mone', 'Simple pricing that scales with you', 'Get paid faster, starting today']
+  sections: ['hero', 'features', 'testimonial', 'pricing', 'cta']
+  cta_words: ['Get started', 'Sign in', 'Start free', 'Start free trial']
+  kpi: 4
+
+=== marketing-2.html (27641 bytes)
+  fonts: [('Inter', 1)]
+  google_fonts: []
+  hex_top: [('7C6CFF', 2), ('4FD1C5', 2), ('D5DAE4', 2), ('0B0D12', 1), ('12151D', 1), ('181C27', 1), ('F2F4F8', 1), ('9AA3B5', 1), ('F6C453', 1)]
+  tailwind_hits: []
+  radius: [('999px', 3), ('50%', 3), ('12px', 3), ('var(--radius)', 3), ('10px', 1), ('9px', 1)]
+  bezier: []
+  ease_words: [('linear', 7), ('ease', 4)]
+  durations: [('15s', 4), ('2s', 2), ('42s', 1)]
+  translateY: [('-1px', 1), ('-3px', 1)]
+  max_width: [('860px', 1), ('620px', 1), ('980px', 1), ('640px', 1)]
+  widths: [('280px', 1)]
+  grid_cols: [('repeat(3, 1fr)', 5), ('1fr 1fr', 3), ('1fr', 3), ('200px 1fr', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 12
+  serif: True
+  empty_strings: []
+  h1h2: ['Customer support that  runs itself', 'Everything your support team needs, none', 'Live in an afternoon', 'Simple, usage-based pricing', 'Loved by teams who used to dread Mondays', 'Give your team their week back']
+  sections: ['hero', 'features', 'how', 'pricing', 'testimonials']
+  cta_words: ['Book a demo', 'Sign in', 'Start free', 'Start free trial', 'Start free trial\n          ']
+  kpi: 4
+
+=== marketing-3.html (27043 bytes)
+  fonts: [('var(--font-display)', 9), ('var(--font-body)', 1)]
+  google_fonts: ['Fraunces', 'Inter']
+  hex_top: [('A9E4C3', 5), ('B5B9C0', 4), ('F6F3EC', 1), ('EBE6DA', 1), ('17191C', 1), ('4B4F57', 1), ('8A8E96', 1), ('DCD6C8', 1), ('1F6E4E', 1), ('0F3D2B', 1), ('D9EBDF', 1), ('FFFFFF', 1)]
+  tailwind_hits: []
+  radius: [('999px', 4), ('18px', 2), ('var(--radius)', 2), ('28px', 2), ('50%', 2), ('7px', 1)]
+  bezier: []
+  ease_words: [('ease', 3), ('linear', 2)]
+  durations: [('15s', 3), ('2s', 1)]
+  translateY: [('1px', 1), ('-8px', 1)]
+  max_width: [('480px', 2), ('210px', 1), ('620px', 1), ('760px', 1)]
+  widths: [('210px', 1), ('260px', 1)]
+  grid_cols: [('1fr', 4), ('repeat(3, 1fr)', 3), ('repeat(12, 1fr)', 2), ('1fr 1fr', 2)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 2
+  serif: False
+  empty_strings: []
+  h1h2: ["See next quarter's cash  before it happe", 'Built for the person who actually owns t', 'Ten minutes to your first forecast.', 'Simple plans. No per-seat surprises.', 'Know your runway. Every single Monday.']
+  sections: ['hero', 'features', 'how', 'pricing', 'cta']
+  cta_words: ['Get started', 'Log in', 'Start free trial', 'Start free trial →']
+  kpi: 5
+
+######## claude-opus-5-5
+
+=== dashboard-1.html (26084 bytes)
+  fonts: [('var(--mono)', 3), ('var(--font)', 2)]
+  google_fonts: []
+  hex_top: [('1F5F4A', 4), ('8D8980', 3), ('E4E0D8', 2), ('EFECE6', 2), ('2F2E2A', 2), ('CFDCD6', 2), ('F4F2EE', 1), ('FFFFFF', 1), ('1C1B19', 1), ('57544E', 1), ('E3EEE9', 1), ('B5651D', 1)]
+  tailwind_hits: []
+  radius: [('8px', 6), ('99px', 5), ('6px', 3), ('50%', 3), ('7px', 2), ('var(--radius)', 2)]
+  bezier: []
+  ease_words: []
+  durations: [('15s', 2)]
+  translateY: []
+  max_width: [('380px', 1), ('1100px', 1), ('780px', 1)]
+  widths: []
+  grid_cols: [('1fr', 3), ('var(--sidebar) 1fr', 1), ('repeat(4, 1fr)', 1), ('2fr 1fr', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 0
+  serif: False
+  empty_strings: []
+  h1h2: ['Overview', 'Revenue vs. invoiced', 'Revenue by plan', 'Recent invoices', 'Activity']
+  sections: ['sidebar', 'topbar', 'page-head', 'kpis', 'card', 'card', 'card', 'card']
+  cta_words: []
+  kpi: 22
+
+=== dashboard-2.html (34272 bytes)
+  fonts: [('Inter', 1), ('inherit', 1), ('ui-monospace', 1)]
+  google_fonts: []
+  hex_top: [('4F46E5', 8), ('22D3EE', 4), ('12976B', 3), ('6366F1', 3), ('F0F2F5', 2), ('1B1F27', 2), ('2B3140', 2), ('C7CBD6', 2), ('F59E0B', 2), ('F5F6F8', 1), ('FFFFFF', 1), ('E3E6EB', 1)]
+  tailwind_hits: ['4F46E5', '6366F1', 'DCFCE7', 'F59E0B', 'FEF3C7']
+  radius: [('8px', 7), ('999px', 5), ('50%', 5), ('6px', 3), ('10px', 1), ('4px', 1)]
+  bezier: []
+  ease_words: [('linear', 2)]
+  durations: [('15s', 5), ('05s', 1)]
+  translateY: [('1px', 1)]
+  max_width: [('420px', 1), ('1200px', 1), ('980px', 1), ('820px', 1)]
+  widths: []
+  grid_cols: [('1fr', 3), ('248px 1fr', 1), ('repeat(4, 1fr)', 1), ('2fr 1fr', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 2
+  serif: True
+  empty_strings: []
+  h1h2: ['Dashboard', 'Revenue overview', 'Sales by channel', 'Recent orders', 'Recent activity']
+  sections: ['sidebar', 'nav', 'topbar', 'content', 'kpis', 'grid-2', 'grid-2']
+  cta_words: []
+  kpi: 17
+
+=== dashboard-3.html (37754 bytes)
+  fonts: [('var(--mono)', 4), ('var(--font)', 2)]
+  google_fonts: []
+  hex_top: [('1F6F54', 11), ('1B1D1C', 4), ('EFECE6', 3), ('B3412E', 3), ('2F5D8A', 3), ('3FAE84', 3), ('8A8F8B', 2), ('E4E1DA', 2), ('B7791F', 2), ('CFCAC0', 2), ('CFE5DA', 2), ('D9A44A', 2)]
+  tailwind_hits: []
+  radius: [('var(--radius-sm)', 6), ('6px', 6), ('50%', 5), ('8px', 4), ('20px', 3), ('var(--radius)', 2)]
+  bezier: []
+  ease_words: [('linear', 1)]
+  durations: [('15s', 4), ('12s', 1)]
+  translateY: []
+  max_width: [('420px', 1), ('1200px', 1), ('860px', 1), ('540px', 1)]
+  widths: []
+  grid_cols: [('1fr', 3), ('248px 1fr', 1), ('repeat(4, 1fr)', 1), ('2fr 1fr', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 1
+  serif: False
+  empty_strings: []
+  h1h2: ['Overview', 'Revenue vs. invoiced', 'Invoice status', 'Recent invoices', 'Activity', 'Quick actions']
+  sections: ['sidebar', 'nav-group', 'nav-group', 'topbar', 'content', 'kpis', 'grid-2', 'grid-2']
+  cta_words: []
+  kpi: 22
+
+=== diagram-1.html (13958 bytes)
+  fonts: [('Inter', 1), ('SF Mono', 1)]
+  google_fonts: []
+  hex_top: [('4F46E5', 20), ('E2E8F0', 10), ('CBD5E1', 10), ('0F172A', 9), ('14B8A6', 7), ('94A3B8', 6), ('64748B', 5), ('F59E0B', 3), ('F43F5E', 3), ('CCFBF1', 3), ('E0E7FF', 3), ('FFFFFF', 2)]
+  tailwind_hits: ['0F172A', '4F46E5', '6366F1', '64748B', 'E2E8F0', 'F1F5F9', 'F59E0B', 'F8FAFC', 'FEF3C7']
+  radius: []
+  bezier: []
+  ease_words: []
+  durations: []
+  translateY: []
+  max_width: [('1240px', 1)]
+  widths: []
+  grid_cols: []
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 0
+  serif: True
+  empty_strings: []
+  h1h2: []
+  sections: []
+  cta_words: ['Sign in']
+  kpi: 0
+
+=== diagram-2.html (16619 bytes)
+  fonts: [('system-ui', 1), ('ui-monospace', 1)]
+  google_fonts: []
+  hex_top: [('FFFFFF', 15), ('4F46E5', 14), ('D1D5DB', 9), ('E5E7EB', 8), ('374151', 7), ('7C3AED', 7), ('111827', 6), ('9CA3AF', 5), ('F59E0B', 4), ('818CF8', 3), ('C4B5FD', 3), ('2563EB', 3)]
+  tailwind_hits: ['10B981', '2563EB', '4F46E5', '6366F1', '8B5CF6', 'F59E0B', 'FEF3C7']
+  radius: []
+  bezier: []
+  ease_words: []
+  durations: []
+  translateY: []
+  max_width: [('1200px', 1)]
+  widths: []
+  grid_cols: []
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 0
+  serif: True
+  empty_strings: []
+  h1h2: []
+  sections: []
+  cta_words: ['Sign in']
+  kpi: 0
+
+=== diagram-3.html (18179 bytes)
+  fonts: [('Inter', 1), ('SF Mono', 1)]
+  google_fonts: []
+  hex_top: [('7C5CFF', 9), ('8A93A8', 8), ('BFE9E8', 7), ('F2FBFB', 6), ('D9DDE8', 5), ('EFEAFF', 5), ('C27803', 5), ('C9CED9', 5), ('E5484D', 4), ('FDE2A8', 4), ('EEF4FF', 4), ('C6DAFC', 4)]
+  tailwind_hits: ['3B82F6', 'F59E0B']
+  radius: []
+  bezier: []
+  ease_words: [('linear', 1), ('ease', 1)]
+  durations: [('1.2s', 1), ('200ms', 1)]
+  translateY: []
+  max_width: [('1240px', 1)]
+  widths: []
+  grid_cols: []
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 0
+  serif: True
+  empty_strings: []
+  h1h2: []
+  sections: []
+  cta_words: []
+  kpi: 0
+
+=== marketing-1.html (25358 bytes)
+  fonts: [('var(--mono)', 14), ('var(--serif)', 8), ('var(--sans)', 3)]
+  google_fonts: []
+  hex_top: [('B9B1A2', 4), ('2F5D4A', 3), ('F08A62', 3), ('D9481C', 2), ('F4EFE6', 1), ('EBE4D6', 1), ('1C1A17', 1), ('57524A', 1), ('D6CDBB', 1), ('F6D9CC', 1), ('D5E3D9', 1), ('FFFDF8', 1)]
+  tailwind_hits: []
+  radius: [('50%', 3), ('6px', 2), ('999px', 2), ('18px', 2), ('8px', 1), ('0', 1)]
+  bezier: []
+  ease_words: [('ease', 4), ('linear', 1)]
+  durations: [('15s', 4), ('2s', 1)]
+  translateY: [('-1px', 1), ('-10px', 1)]
+  max_width: [('1160px', 1), ('500px', 1), ('460px', 1), ('900px', 1)]
+  widths: [('280px', 1)]
+  grid_cols: [('1fr', 4), ('repeat(3, 1fr)', 3), ('1fr 1fr', 2), ('1.05fr 1fr', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 1
+  serif: True
+  empty_strings: []
+  h1h2: ['Sign-offs,  without  the chasing.', 'Everything a sign-off needs. Nothing it ', 'From request to "yes" in four steps.', 'Simple plans. Honest prices.', 'Questions, answered.', 'Stop chasing. Start approving.']
+  sections: ['wrap', 'hero', 'features', 'how', 'quote', 'pricing', 'faq']
+  cta_words: ['Get started', 'Sign in', 'Start free', "Start free, upgrade when you're ready. Only pay for people who submit requests. Approvers are always free."]
+  kpi: 4
+
+=== marketing-2.html (29391 bytes)
+  fonts: [('var(--serif)', 13), ('var(--mono)', 10), ('var(--sans)', 5)]
+  google_fonts: []
+  hex_top: [('FFFDF8', 3), ('B9B2A4', 3), ('3B3934', 3), ('FF8A6D', 2), ('F6F2EA', 1), ('EDE7DB', 1), ('1B1A17', 1), ('57534A', 1), ('D9D1C1', 1), ('E0492B', 1), ('B8361C', 1), ('2F5D50', 1)]
+  tailwind_hits: []
+  radius: [('50%', 5), ('999px', 5), ('18px', 3), ('50% 50% 50% 4px', 1), ('4px', 1), ('12px', 1)]
+  bezier: []
+  ease_words: [('linear', 1)]
+  durations: [('2s', 5), ('15s', 1), ('25s', 1)]
+  translateY: [('-1px', 1), ('-10px', 1)]
+  max_width: [('600px', 2), ('1160px', 1), ('520px', 1), ('180px', 1)]
+  widths: [('280px', 2)]
+  grid_cols: [('repeat(3, 1fr)', 3), ('1fr 1fr', 3), ('1fr', 3), ('1.05fr 1fr', 1)]
+  icons: []
+  dark_mode: False
+  texture: False
+  gradient: 1
+  serif: True
+  empty_strings: []
+  h1h2: ['Release notes your customers  actually r', 'Everything between “merged” and “my cust', 'From pull request to published in three ', 'Simple plans that grow with your audienc', 'Questions, answered.', 'Your next release deserves an audience.']
+  sections: ['hero', 'features', 'how', 'pricing', 'faq', 'site']
+  cta_words: ['Book a demo', 'Get started', 'Sign in', 'Start free', 'Start free today →', 'Start free. Upgrade when your readership does. Cancel whenever.']
+  kpi: 5
+
+=== marketing-3.html (36850 bytes)
+  fonts: [('var(--serif)', 4), ('var(--mono)', 2), ('var(--sans)', 1)]
+  google_fonts: []
+  hex_top: [('C9C2B2', 4), ('3A3731', 4), ('4A463E', 2), ('D9480F', 2), ('FF8A4C', 2), ('F5F1E8', 1), ('ECE6D8', 1), ('1B1A17', 1), ('7A7466', 1), ('D8D0BD', 1), ('FFF7F2', 1), ('2B8A3E', 1)]
+  tailwind_hits: []
+  radius: [('999px', 5), ('50%', 5), ('var(--radius)', 5), ('8px', 4), ('6px', 2), ('3px', 2)]
+  bezier: []
+  ease_words: [('linear', 7), ('ease', 6), ('ease-in-out', 2)]
+  durations: [('15s', 3), ('6s', 2), ('2s', 2), ('3s', 1), ('25s', 1)]
+  translateY: [('-8px', 1), ('-10px', 1)]
+  max_width: [('980px', 1), ('480px', 1), ('680px', 1)]
+  widths: [('250px', 1), ('220px', 1)]
+  grid_cols: [('1fr', 6), ('1fr 1fr', 5), ('repeat(3,1fr)', 2), ('1.05fr 1fr', 1)]
+  icons: []
+  dark_mode: True
+  texture: True
+  gradient: 8
+  serif: True
+  empty_strings: []
+  h1h2: ["Ship the feature.  We'll write  the stor", 'Your team ships weekly. Your customers  ', 'Everything between  merged  and  noticed', 'From pull request to published in three ', 'Simple plans that grow with you.', 'Questions, answered.', 'Your next release deserves an audience.']
+  sections: ['site', 'main', 'hero', 'section', 'features', 'how', 'section', 'pricing', 'faq', 'start']
+  cta_words: ['Get started', 'Get started free', 'Sign in', 'Start free', 'Start free trial\n            ']
+  kpi: 6

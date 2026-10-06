@@ -1,5 +1,7 @@
 # Motion Patterns: Element Vocabulary by Job
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 Motion is a material, not a garnish. Every animated element must answer a
 question the reader is actually asking — *where did this come from, what
 changed, did my action register, how far along am I, what is alive here*. An
@@ -8,7 +10,8 @@ the fastest way to make careful work look cheap.
 
 This file is the **vocabulary**: what kinds of motion element exist, per job.
 For timing values, easing curves, and copy-ready CSS, see
-[polish-and-craft.md](polish-and-craft.md). For the discipline rules (durations,
+[polish-and-craft.md](polish-and-craft.md) (component-level recipes: its
+Additional Motion Recipes section). For the discipline rules (durations,
 `transform`/`opacity` only, ceremony scaled to frequency), see the main skill,
 Step 12.
 
@@ -254,6 +257,6 @@ entrance fade is a tell.
 - **Motion that outruns the content.** If the reader scrolls faster than the
   sequence, they see broken states — test at real reading speed, not at the
   speed of someone admiring their own build.
-- **Effects the brand didn't earn.** A shader hero on a page about invoicing is
+- **Effects the brand didn't earn.** A shader hero on a page about a routine admin tool is
   borrowed impressiveness. Motion should come from the product's own world, the
   same way palette and typography do.

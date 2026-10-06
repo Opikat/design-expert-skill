@@ -1,5 +1,21 @@
 # Naming Conventions Reference
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
+## Which to apply
+
+Apply one convention consistently across all code output; never mix in the same
+project.
+
+- **Default — Finsweet Client First** (Webflow and general CSS): `[element]_[identifier]`
+  (`section_hero`, `button_primary`); utilities `is-[property]` (`is-active`);
+  rich text `text-rich-[scope]`.
+- **Alternative — BEM** (React components, non-Webflow stacks): `block__element--modifier`
+  (`card__title--highlighted`).
+
+Choose Client First by default; switch to BEM when the stack's established
+convention is BEM. Clarify which is in use before generating code.
+
 A comprehensive guide to two major CSS/component naming systems and when to use each.
 
 ---

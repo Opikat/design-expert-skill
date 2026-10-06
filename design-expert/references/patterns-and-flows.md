@@ -1,5 +1,7 @@
 # Patterns and Flows: A Selection Library
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 Patterns are context-dependent. Every entry here states when it works, when
 it fails, and how it gets misused -- because recommending a pattern without
 its failure conditions is how generic UX advice happens.
