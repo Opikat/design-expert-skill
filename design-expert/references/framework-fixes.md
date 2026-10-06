@@ -1,5 +1,7 @@
 # Framework-specific Fix Guide
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 This document explains specific fix techniques for each framework and styling method.
 
 ---

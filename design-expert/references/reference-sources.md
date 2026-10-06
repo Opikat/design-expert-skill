@@ -1,5 +1,7 @@
 # Reference Sources: Where to Go Look, By Need
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 Vocabulary comes from seeing, not from remembering. When a direction is unclear
 — or when the first idea is suspiciously familiar — the move is to name **two
 or three specific places to look and what to look at in each**, not to browse a
@@ -35,7 +37,7 @@ own material.
   pattern. Strongest source for app and product UI rather than marketing pages.
 - **Awwwards**, **Godly** — the ambitious end. Useful for range, dangerous as a
   default: much of it optimises for jury attention rather than for a reader
-  deciding whether to hire someone.
+  deciding whether this solves their problem.
 - **Minimal.gallery**, **Httpster** — the restrained end; good counterweight to
   the above.
 
@@ -50,8 +52,9 @@ own material.
   when a designer, not a developer, drives it.
 - **Emil Kowalski's writing and course** — the taste layer for interface motion:
   when animation earns its place, and the small decisions that separate polished
-  from noisy. The local `emil-design-eng` skill carries this philosophy; load it
-  when the task is interface polish or animation judgement.
+  from noisy. Its craft recipes live in
+  [polish-and-craft.md](polish-and-craft.md) → Additional Motion Recipes; read
+  that section when the task is interface polish or animation judgement.
 
 ### Typography — pairings and display type in real use
 - **Typewolf** — pairings in context, with the fonts named.

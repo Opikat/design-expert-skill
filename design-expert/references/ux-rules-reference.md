@@ -1,6 +1,8 @@
-# UX Rules Reference - 99 Design Rules
+# UX Rules Reference - 205 Design Rules
 
-Complete reference of all 99 UX, interaction, and design guidelines organized by priority category.
+Bans in SKILL.md Step 4 win over any value in this file.
+
+Complete reference of all 205 UX, interaction, and design guidelines organized by priority category.
 
 ## Rule Categories by Priority
 
@@ -60,7 +62,7 @@ Complete reference of all 99 UX, interaction, and design guidelines organized by
 
 ---
 
-## 3. Performance (HIGH) - 18 Rules
+## 3. Performance (HIGH) - 19 Rules
 
 - `image-optimization` - Use WebP/AVIF, responsive images (srcset/sizes), lazy load non-critical assets
 - `image-dimension` - Declare width/height or use aspect-ratio to prevent layout shift (Core Web Vitals: CLS)
@@ -123,7 +125,7 @@ Complete reference of all 99 UX, interaction, and design guidelines organized by
 
 ---
 
-## 6. Typography & Color (MEDIUM) - 16 Rules
+## 6. Typography & Color (MEDIUM) - 15 Rules
 
 - `line-height` - Use 1.5-1.75 for body text
 - `line-length` - Limit to 65-75 characters per line
@@ -143,7 +145,7 @@ Complete reference of all 99 UX, interaction, and design guidelines organized by
 
 ---
 
-## 7. Animation (MEDIUM) - 23 Rules
+## 7. Animation (MEDIUM) - 24 Rules
 
 - `duration-timing` - Use 150–300ms for micro-interactions; complex transitions ≤400ms; avoid >500ms (MD)
 - `transform-performance` - Use transform/opacity only; avoid animating width/height/top/left
@@ -172,7 +174,7 @@ Complete reference of all 99 UX, interaction, and design guidelines organized by
 
 ---
 
-## 8. Forms & Feedback (MEDIUM) - 28 Rules
+## 8. Forms & Feedback (MEDIUM) - 31 Rules
 
 - `input-labels` - Visible label per input (not placeholder-only)
 - `error-placement` - Show error below the related field
@@ -180,7 +182,7 @@ Complete reference of all 99 UX, interaction, and design guidelines organized by
 - `required-indicators` - Mark required fields (e.g. asterisk)
 - `empty-states` - Helpful message and action when no content
 - `toast-dismiss` - Auto-dismiss toasts in 3-5s
-- `confirmation-dialogs` - Confirm before destructive actions
+- `confirmation-dialogs` - Undo first for destructive actions; confirm only when undo is impossible (payments, sends to third parties, permanent purges)
 - `input-helper-text` - Provide persistent helper text below complex inputs, not just placeholder (Material Design)
 - `disabled-states` - Disabled elements use reduced opacity (0.38–0.5) + cursor change + semantic attribute (MD)
 - `progressive-disclosure` - Reveal complex options progressively; don't overwhelm users upfront (Apple HIG)
@@ -239,7 +241,7 @@ Complete reference of all 99 UX, interaction, and design guidelines organized by
 
 ---
 
-## 10. Charts & Data (LOW) - 27 Rules
+## 10. Charts & Data (LOW) - 30 Rules
 
 - `chart-type` - Match chart type to data type (trend → line, comparison → bar, proportion → pie/donut)
 - `color-guidance` - Use accessible color palettes; avoid red/green only pairs for colorblind users (WCAG, MD)
@@ -249,7 +251,7 @@ Complete reference of all 99 UX, interaction, and design guidelines organized by
 - `tooltip-on-interact` - Provide tooltips/data labels on hover (Web) or tap (mobile) showing exact values (HIG, MD)
 - `axis-labels` - Label axes with units and readable scale; avoid truncated or rotated labels on mobile
 - `responsive-chart` - Charts must reflow or simplify on small screens (e.g. horizontal bar instead of vertical, fewer ticks)
-- `empty-data-state` - Show meaningful empty state when no data exists ("No data yet" + guidance), not a blank chart (MD)
+- `empty-data-state` - Show meaningful empty state when no data exists (what will appear here + the first action pre-staged, or a worked example), not a blank chart (MD)
 - `loading-chart` - Use skeleton or shimmer placeholder while chart data loads; don't show an empty axis frame
 - `animation-optional` - Chart entrance animations must respect prefers-reduced-motion; data should be readable immediately (HIG)
 - `large-dataset` - For 1000+ data points, aggregate or sample; provide drill-down for detail instead of rendering all (MD)
@@ -276,17 +278,17 @@ Complete reference of all 99 UX, interaction, and design guidelines organized by
 
 ## Summary
 
-**Total: 99 UX Rules** distributed across 10 categories:
+**Total: 205 UX Rules** distributed across 10 categories:
 
 - Accessibility: 14 rules (CRITICAL)
 - Touch & Interaction: 17 rules (CRITICAL)
-- Performance: 18 rules (HIGH)
+- Performance: 19 rules (HIGH)
 - Style Selection: 13 rules (HIGH)
 - Layout & Responsive: 16 rules (HIGH)
-- Typography & Color: 16 rules (MEDIUM)
-- Animation: 23 rules (MEDIUM)
-- Forms & Feedback: 28 rules (MEDIUM)
+- Typography & Color: 15 rules (MEDIUM)
+- Animation: 24 rules (MEDIUM)
+- Forms & Feedback: 31 rules (MEDIUM)
 - Navigation Patterns: 26 rules (HIGH)
-- Charts & Data: 27 rules (LOW)
+- Charts & Data: 30 rules (LOW)
 
 Use this reference during design reviews, QA, and before delivery to ensure all critical and high-priority rules are met.

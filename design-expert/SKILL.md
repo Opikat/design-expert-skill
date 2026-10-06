@@ -1,6 +1,6 @@
 ---
 name: design-expert
-description: "Unified UI/UX design skill: strategy, visual craft, aesthetic direction, design-system generation, and live-site review. Use for ANY design task — building distinctive interfaces, reviewing existing UI/UX, fixing layouts at the source-code level, choosing styles/colors/fonts, creating design systems, auditing accessibility, planning user flows, or polishing visual details. Triggers on: 'design', 'UI', 'UX', 'layout', 'spacing', 'colors', 'typography', 'dashboard', 'landing page', 'component', 'responsive', 'dark mode', 'accessibility', 'user flow', 'wireframe', 'prototype', 'design system', 'style guide', 'naming convention', 'Client First', 'BEM', 'review website design', 'check the UI', 'fix the layout', 'make it look good', 'it looks off', 'how should this flow', 'distinctive', 'generic', 'polish'. Also activates when building any user-facing interface (website, app, dashboard, form, modal, card, table, chart, onboarding, checkout) even without saying 'design'. This is the MANDATORY BASE LAYER for every design task — brand/context profiles (personal brand, product design systems, client identities) load ON TOP of it, never instead of it. Do NOT look for separate UX, UI, frontend-design, or web-design-reviewer skills. Do NOT activate for pure backend logic, database schemas, API design without UI, or DevOps."
+description: "UI/UX design: strategy, visual craft, aesthetic direction, design systems, UI review. Triggers: 'design', 'UI', 'UX', 'layout', 'spacing', 'colors', 'typography', 'dashboard', 'landing page', 'component', 'responsive', 'dark mode', 'accessibility', 'user flow', 'wireframe', 'prototype', 'design system', 'style guide', 'review website design', 'check the UI', 'fix the layout', 'make it look good', 'it looks off', 'how should this flow', 'distinctive', 'generic', 'polish', or building any user-facing interface. Mandatory base for every design task; brand/product profiles load on top, never instead. Do NOT activate for backend logic, database schemas, UI-less API design, or DevOps."
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, WebSearch
 ---
 
@@ -27,19 +27,19 @@ first — then proceed through the workflow below.
 
 ## How This Skill Works
 
-This skill has a thinking spine (Steps 0–17) plus a set of tools it owns
+This skill has a thinking spine (Steps 0–17) plus tools and task references
 (generator, typography calculator, naming, live-site review, UX-rules DB).
 Your job is to select the right depth for the task — **scale to scope**:
 
 | Task | What to run |
 |------|-------------|
 | **Small edit** (move a button, tweak a token, one fix) | Skip the gate and divergence. Inherit the existing direction; apply the relevant Build/Verify steps only. |
-| **Audit / review** (existing interface) | Steps 1 (one question) → Verify checklists + audit format. For a running site, use the Live Site Review Workflow. |
+| **Audit / review** (existing interface) | Steps 1 (one question) → Verify checklists + audit format. For a running site, follow `references/live-site-review.md`. |
 | **New feature / flow** | Full UX arc: Steps 0–8, then Build (9–15), then Verify (16–17). |
 | **New build from scratch** | All of it, in order. Diverge (Step 5) before any visual commitment. |
-| **Design-system generation** (palettes, font pairings, style match) | Run the Python search scripts (see "Design System Generator"). |
-| **Typography values** (line-height, tracking, type scale) | **ALWAYS** run `typography_calc.py` — never guess type values. |
-| **Naming** (CSS classes, components) | Apply "Naming Conventions". |
+| **Design-system generation** (palettes, font pairings, style match) | Run the Python search scripts: `references/design-system-generator.md`. |
+| **Typography values** (line-height, tracking, type scale) | Type scale from Step 9. |
+| **Naming** (CSS classes, components) | Apply `references/naming-conventions.md`. |
 | **Shaping a section** (how a set of links, a sequence, a comparison, a proof is composed) | Name the job, then choose from `references/section-patterns.md` — never default to a card grid. |
 | **Choosing a motion element** (what animates, not how fast) | Name the job, then choose from `references/motion-patterns.md`; write the reduced-motion end state first. |
 | **Stuck, or the first idea arrived too fast** | Name 2–3 specific places to look and the question to ask at each — `references/reference-sources.md` — and offer to capture them side by side. |
@@ -130,7 +130,8 @@ consistent values across the existing codebase. If signals are ambiguous, ask:
 "Do you have an existing design system or brand tokens I should follow?"
 
 - **Mode A — Greenfield (no system exists):** full derivation. Steps 2–5 run
-  completely; you are creating the identity.
+  completely; you are creating the identity. Palette, font-pairing and style
+  raw material: `references/design-system-generator.md`.
 - **Mode B — Existing system (tokens/brand exist):** the system is LAW. Read
   the actual tokens before designing — never work from memory of what they
   probably are. Every color, typeface, spacing value, and radius comes from the
@@ -309,47 +310,56 @@ every design converges to the same design.
 
 The table above is qualitative. These are the exact values that arrive unprompted,
 measured by the three-blank-brief method: one vague sentence per surface, three
-independent sessions, no skills or references attached, then diff what all three
-produced. Counts are runs-out-of-three. **Measured 2026-07-30 on Sonnet 5;
-re-derive by 2026-10-30 and after any model update** — the middle moves, and a
-stale list reads as coverage while missing the current default.
+independent headless sessions per model (`claude -p`, no tools, no skills, no
+CLAUDE.md), then diff what all three produced. Counts are runs-out-of-three per
+model, F = Fable 5.1, O = Opus 5.5. **Measured 2026-09-24.** Re-measure after a
+model change: the middle moves, and a stale list reads as coverage while missing
+the current default.
 
 | Where | What arrives by itself |
 |---|---|
-| Body face | Inter, every surface (3/3); a mono face for numerals (2/3) |
-| Palette | unmodified Tailwind — `#4F46E5`, `#16A34A`/`#DCFCE7`, `#D97706`/`#FEF3C7`, `#DC2626`/`#FEE2E2` (identical hexes 2/3; `#DC2626` 3/3) |
-| Ink / border / wash | `#14171F`, `#E3E6ED`, `#F6F7FB`, within ±2 per channel (3/3) |
-| Radius set | app `6 8 12 999` (3/3 identical); marketing `6 10 14–16 999` (3/3) |
-| Marketing grid | 12 columns, 1200 max-width, 96 section padding, 12 related gap (3/3) |
-| App shell | 240 sidebar, 64 top bar, 32 padding → 1136 content, 740 chart beside a 372 panel, 56 row height (3/3) |
-| Icons | Lucide at 1.5px stroke — 24 feature, 20 nav, 16 inline (3/3) |
-| Motion | `cubic-bezier(0.16, 1, 0.3, 1)`, 400ms, translateY 12–16px (3/3); 40ms stagger; toast held 4000ms |
-| Measure | 65 characters / 600–640px (3/3) |
-| Dark mode | near-black blue canvas plus one step lighter surface (3/3); absent entirely on marketing (3/3) |
-| Reflexes of escape | a serif display over an Inter body (2/3); warm paper `#F5F3EE`–`#FAF8F5` (3/3); a texture at exactly 4% opacity (2/3); one small geometric mark (3/3) |
+| Body face | system stack `-apple-system / ui-sans-serif, "Segoe UI", Inter, Roboto` on app and diagram (F 5/6, O 5/6); Inter named first only on marketing (F 3/3); a mono face `ui-monospace, "SF Mono", Menlo` for numerals and labels (O 9/9, F 1/9); app body 14px (6/6) |
+| Marketing look, O | serif display `"Iowan Old Style", Palatino, Georgia` + warm paper `#F4EFE6`–`#F6F2EA` + ink `#1B1A17` + burnt-orange accent `#D9481C`–`#E0492B` + body 17px (O 3/3). The 2026-07 "reflex of escape" is now the Opus default, so it is a default too |
+| Marketing look, F | dark canvas `#0B0F1A`/`#0B0D12`, surfaces `#111827`/`#12151D`, mint/sky/violet accents `#6EE7B7 #38BDF8 #7C6CFF #4FD1C5`, `linear-gradient(135deg, accent, accent-2)` on the h1 phrase and the CTA (F 2/3); warm paper + Fraunces + forest green `#1F6E4E` (F 1/3) |
+| App palette | wash `#F4F6FA` / surface `#FFFFFF` / ink `#111827`–`#1A2233` (F 3/3); indigo `#4F46E5` primary (F 2/3, O 1/3) with Tailwind status hexes `#16A34A/#DCFCE7 #D97706/#FEF3C7 #DC2626/#FEE2E2 #F59E0B` (F 2/3, O 1/3); warm off-white `#F4F2EE` + forest green `#1F5F4A`–`#1F6F54` (O 2/3) |
+| Radius set | app `6 8 999` plus `50%` avatars (6/6); marketing `10–12 999` (F 3/3) or `18` cards (O 2/3) |
+| Marketing grid | content 960–1160 max-width, prose 600–860 (6/6); `repeat(3, 1fr)` for features and pricing (6/6); a 12-column grid once (F 1/3) |
+| App shell | sidebar 232–250 (6/6; dark `#111827`–`#141B2D` on F 3/3, light on O 2/3) → top bar 64 → `repeat(4, 1fr)` KPI cards → `2fr 1fr` chart beside panel → table `Customer · Order/Invoice · Date/Due · Status · Amount` (6/6); search + bell + avatar (6/6); greeting "Good morning, Elena" (F 2/3); the invoicing domain chosen unprompted (O 2/3) |
+| Icons | no icon library; hand-drawn inline SVG at 1.5–2px stroke (18/18). Lucide did not appear |
+| Motion | no `cubic-bezier` anywhere (0/18); `transition: background .15s, color .15s` in app (6/6); hover lift `transform .15–.2s ease` + `translateY(-1px … -10px)` on marketing cards and buttons (6/6); `prefers-reduced-motion → transition: none !important` (O 3/3); no entrance animation, no stagger; a `bob 6s ease-in-out` float (O 1/3) |
+| Type detail | heading `letter-spacing -0.02 … -0.035em` (11/12 layouts); uppercase kicker at `.06 … .14em` tracking above every h2 and every diagram layer (18/18) |
+| Dark mode | via media query 1/18 (O marketing); F marketing is dark by default (2/3); app and diagram light only (12/12) |
+| Texture, gradient | grain 1/18 (O marketing); gradient fills in charts and accent text on F (8/9), near zero on O (2/9) |
+| Copy formulas | h1 "X that runs itself" (F 2/3), "Ship X. We'll Y." / "X, without the Y." (O 3/3); h2 "Everything between X and Y" (4/6), "From X to Y in three steps" (O 3/3), "Simple plans…" (6/6), "Questions, answered." (O 3/3); closing mirrored punchline "Stop chasing. Start approving." (O 3/3); CTAs "Start free" + "Book a demo" / "Sign in" (6/6) |
 
-The last row is the load-bearing one: banning the rows above lands there, so it
-is banned too. A ban only moves the answer down the ranking — the replacement has
-to be derived (Step 2) or chosen (Step 5), never defaulted.
+The 2026-07 Sonnet 5 defaults (Inter first everywhere, Lucide, `cubic-bezier(0.16, 1,
+0.3, 1)` 400ms with translateY 12–16px, 4% grain, `No data yet`) did not appear once
+in 18 runs. They stay banned as known fallbacks: a ban only moves the answer down the
+ranking — the replacement has to be derived (Step 2) or chosen (Step 5), never
+defaulted.
 
 ### The banned skeletons
 
 Structure survives every token swap, so it is the part a reader recognizes first.
-Each of these came back identical from three independent sessions:
+Each of these came back near-identical from both models (6/6 unless noted):
 
-- **Marketing page.** Nav (logo left, links centre, log-in plus button right,
-  sticky with a hairline appearing on scroll) → hero (kicker chip, headline,
-  subhead, primary plus secondary, trust microcopy, screenshot in browser chrome)
-  → logo strip → three feature cards → three how-it-works steps → testimonial →
-  three pricing tiers with the middle one elevated → FAQ accordion → dark CTA
-  band → footer.
-- **App dashboard.** 240 sidebar with the account block bottom-left → top bar with
-  search, bell and avatar → four stat cards → one wide chart beside a narrow
-  panel → table reading link, avatar-plus-name, two dates, right-aligned amount,
-  status badge, kebab.
-- **Explainer diagram.** A four-band layered stack running foundation → parts →
-  patterns → surface, with a tint ramp up the bands. This arrived 3/3 for a brief
-  that named no device at all, so any four-tier stack now needs an argument.
+- **Marketing page.** Nav (logo left, links centre, "Sign in" plus primary button
+  right) → hero (eyebrow chip, headline with one highlighted or italic phrase,
+  subhead, "Start free" plus "Book a demo", trust microcopy, product mock) → logo
+  strip "Trusted by" → three feature cards → three how-it-works steps →
+  testimonial quote → three pricing tiers with the middle one badged "Most
+  popular" → FAQ (O 3/3, F 0/3) → dark CTA band with a mirrored-contrast headline
+  → footer.
+- **App dashboard.** 232–250 sidebar with the account block bottom-left → top bar
+  with search, bell and avatar → four KPI cards with delta badges and sparklines →
+  one wide chart beside a narrow panel → table reading customer, id, date, status
+  badge, right-aligned amount, kebab or "View" → activity feed.
+- **Explainer diagram.** A numbered vertical stack of four or five layers
+  "1 Foundations / Tokens → 2 Components → 3 Patterns → 4 Products", uppercase
+  kicker per layer, arrows between bands, code-styled token labels such as
+  `color.primary = #4F46E5`, headline "How a design system works". It arrived 6/6
+  for a brief that named no device at all, so any numbered layer stack now needs
+  an argument.
 
 ## Step 5: Diverge Before You Converge
 
@@ -487,11 +497,13 @@ fails. Three vocabularies, by what you are choosing:
 Each entry states when the pattern works, when it fails, and how it's misused.
 
 **Name the job before the shape.** Every section does exactly one job; say which
-("this routes people elsewhere", "this handles the why-not-Wix doubt") before
+("this routes people elsewhere", "this handles the why-not-a-cheaper-alternative doubt") before
 reaching for a layout. Shape asserts a relationship — equal columns say "peers",
 unequal tiles say "ranked", a connected path says "sequence". If the assertion
 isn't true of the content, the pattern is wrong however good it looks. A section
-doing two jobs does neither; split it.
+doing two jobs does neither; split it. Present the chosen shape against at least
+one rejected candidate and the failure condition that ruled it out — the first
+shape that comes to hand is the most-seen shape, not the fittest one.
 
 **Cross-industry transfer (the creativity engine):** the most original solutions
 come from adjacent industries solving the same underlying problem. Strip the
@@ -521,7 +533,8 @@ work by exploiting the user — knowing them means knowing when to refuse them.
 - **Navigation:** users should always know where am I / where can I go / how do
   I get back — answerable in 1 second. Breadth over depth: 7 visible top-level
   items beat 3 levels of nesting. Consistent placement across pages (spatial
-  memory). Active state always marked.
+  memory). Active state always marked. Never make hover the only reveal, never
+  bury essential navigation, and give every step of a flow an escape route.
 - **Content hierarchy:** every link and button must signal what's behind it
   (information scent). Front-load meaning — key info in the first two words of
   headings and links, because scanning eyes catch line-starts, and left-aligned
@@ -531,7 +544,9 @@ work by exploiting the user — knowing them means knowing when to refuse them.
 - **Design the flow, not the screen:** happy path + edge cases (0, 1, 1000
   items; long names; missing data); error recovery (every error has a clear path
   back to success); useful empty states; loading states that show structure or
-  progress, never a dead spinner.
+  progress, never a dead spinner. No screen is presented without its states
+  (empty, loading, error, success, edge cases) — real users spend most of their
+  time in the states you didn't design.
 
 ---
 
@@ -547,9 +562,11 @@ aesthetic; it never generates it.
 - **Type scale:** pick the ratio that matches the direction's energy —
   1.125–1.2 for dense/technical, 1.25–1.333+ for expressive/editorial. Max 4
   sizes (6 absolute max), max 2 typefaces. As display sizes grow, tighten
-  letter-spacing; ALL CAPS always gets extra tracking. **ALWAYS run
-  `typography_calc.py`** to set line-height and tracking — never guess these; the
-  calculator uses real font metrics (see "Typography Calculator").
+  letter-spacing; ALL CAPS always gets extra tracking. Run
+  `scripts/typography_calc.py` for the type scale. Exemption: when a profile or
+  design system pins the type values (Mode B), use the pinned values and
+  skip the calculator. It sets line-height and tracking from real font metrics
+  (commands under "Typography Calculator").
 - **Color:** 60-30-10 distribution, max 3 hues + neutrals, no pure #000/#FFF,
   consistent gray temperature, AA contrast minimum. The direction decides WHICH
   hues; the system decides how they're distributed.
@@ -654,11 +671,15 @@ ambient, view transition, value change), then pick two candidates from
 failure conditions. That file also carries the implementation ladder: CSS first,
 then native scroll-driven animations and View Transitions, then a little vanilla
 JS, and only then a library — reaching for an animation runtime to fade
-something in is a tell.
+something in is a tell. Component-level recipes (press, popover origin, tooltips,
+clip-path, gestures, performance under load):
+[references/polish-and-craft.md](references/polish-and-craft.md) → Additional
+Motion Recipes.
 
 **Write the reduced-motion end state before building the motion.** If you cannot
 describe what the element looks like standing still, the pattern isn't finished.
 A static hero is not a failure — an animated element that answers no question is.
+A static element is a decision to state, not the absence of one.
 
 ## Step 13: Apply Polish
 
@@ -683,10 +704,9 @@ microcopy pass — full error/empty-state/onboarding copy or a copy audit — ha
 off to a dedicated UX-copywriting skill if one is available in the environment.
 
 **Banned strings.** These arrive verbatim and near-identically across independent
-sessions (measured, see Step 4), so they carry no decision: the empty state `No
-invoices yet` plus `Create your first invoice to start getting paid — it takes
-less than two minutes.`; a stat row reading `Outstanding · Overdue · Paid this
-month · Drafts`; the error template `Couldn't <verb>. Check your connection and
+sessions (2026-07 measurement; the 2026-09-24 runs confirmed the button set and pricing copy, and produced no empty or error states at all), so they carry no decision: the empty state `No
+items yet` plus `Create your first item to get started — it takes less than two
+minutes.`; a stat row reading `Open · Overdue · Closed this month · Drafts`; the error template `Couldn't <verb>. Check your connection and
 try again.`; the button set `Get started free` / `See how it works` / `Talk to
 sales` / `View all` / `Export`; the three-clause value subhead `<verb> in
 minutes, <verb> online, and <benefit>`; a negation-pair headline (`X, not Y`);
@@ -718,7 +738,7 @@ Run all three checklists before presenting. Fix failures first.
 
 ### System checklist
 - [ ] Spacing on the grid; internal ≤ external everywhere?
-- [ ] Type sizes from the scale (values via `typography_calc.py`); max 2 typefaces?
+- [ ] Type sizes from the scale (type scale from Step 9); max 2 typefaces?
 - [ ] 60-30-10 held; AA contrast; consistent gray temperature?
 - [ ] One radius personality; nested radii correct?
 - [ ] Buttons/inputs share height scale; one primary per section?
@@ -769,31 +789,10 @@ the other side of the screen.
 
 # TOOLS THIS SKILL OWNS
 
-## Design System Generator (Python scripts)
-
-For comprehensive design-system recommendations from a searchable database of
-161 palettes, 57 font pairings, 50+ styles, and 161 product types.
-
-```bash
-# Full design system (start here for new projects):
-python3 scripts/search.py "<product_type> <industry> <keywords>" --design-system [-p "Project Name"]
-# Save for reuse (writes design-system/MASTER.md + optional page overrides):
-python3 scripts/search.py "<query>" --design-system --persist -p "Project Name" [--page "dashboard"]
-# Domain-specific search:
-python3 scripts/search.py "<keyword>" --domain <domain> [-n <max_results>]
-# Stack guidelines:
-python3 scripts/search.py "<keyword>" --stack <react|nextjs|angular|flutter|svelte>
-```
-
-Domains: `product`, `style`, `color`, `typography`, `icons`, `chart`, `ux`,
-`landing`, `react`, `web`. The generator selects matches by reasoning rules; it
-supplies raw material for Steps 2–5, it does not replace the divergence.
-
 ## Typography Calculator
 
 Precision line-height and letter-spacing from real font metrics (xHeight,
-capHeight, capWidth) across 8000+ styles. **Use whenever setting type values —
-never guess.**
+capHeight, capWidth) across 8000+ styles.
 
 ```bash
 # Single value:
@@ -807,67 +806,9 @@ python3 scripts/typography_calc.py "<Font>" --lookup
 It snaps line-height to a 4px grid and applies ±1–2% metric corrections per font
 — visible but never system-breaking.
 
-## Naming Conventions
+## UX Rules Reference (205-rule DB)
 
-Apply one convention consistently across all code output; never mix in the same
-project. Full reference: [references/naming-conventions.md](references/naming-conventions.md).
-
-- **Default — Finsweet Client First** (Webflow and general CSS): `[element]_[identifier]`
-  (`section_hero`, `button_primary`); utilities `is-[property]` (`is-active`);
-  rich text `text-rich-[scope]`.
-- **Alternative — BEM** (React components, non-Webflow stacks): `block__element--modifier`
-  (`card__title--highlighted`).
-
-Choose Client First by default; switch to BEM when the stack's established
-convention is BEM. Clarify which is in use before generating code.
-
-## Live Site Review Workflow
-
-Use when the task is to visually inspect a **running website** and fix issues at
-the source-code level (distinct from reviewing a Figma file or static
-component). Requires browser automation (e.g. Playwright MCP), source access, and
-a see-it → change-it loop. Framework-specific fix patterns:
-[references/framework-fixes.md](references/framework-fixes.md). Exhaustive
-inspection checklist: [references/visual-checklist.md](references/visual-checklist.md).
-
-- **A — Gather:** confirm the URL (localhost/staging/prod); detect the project
-  (`package.json`, config files, `src/`/`app/`); identify the styling method
-  (pure CSS, SCSS, CSS Modules, Tailwind → className, styled-components/Emotion → JS/TS).
-- **B — Inspect:** navigate + screenshot; retrieve DOM snapshot; test **all
-  viewports** (375 / 768 / 1280 / 1920) — do not skip. Check layout (overflow,
-  overlap, alignment, clipping), responsive, accessibility (contrast, focus,
-  alt), and visual consistency.
-- **C — Prioritize:** P0 functionality-breaking · P1 serious UX (fix now) · P2
-  alignment/spacing · P3 minor.
-- **D — Fix at the source:** locate the file by class/ID/component; apply the
-  **minimal** change; follow existing code style; one issue at a time.
-- **E — Re-verify:** reload/HMR; before/after screenshot; regression-check
-  adjacent areas and breakpoints. **If more than 3 attempts on one issue, consult
-  the user.**
-- **F — Report:** summary table (URL, framework, styling, viewports tested,
-  issues detected/fixed), then per-issue Detected/Unfixed/Recommendations.
-
-Debug: `* { outline: 1px solid red !important; }`; overflow scan via
-`document.querySelectorAll('*')` comparing `scrollWidth`/`clientWidth`. Never do
-large refactors during a live review without confirmation.
-
-## UX Rules Quick Reference (99-rule DB)
-
-Priority-ordered checks; full details in
-[references/ux-rules-reference.md](references/ux-rules-reference.md).
-
-| # | Category | Impact | Key checks |
-|---|----------|--------|-----------|
-| 1 | Accessibility | CRITICAL | Contrast 4.5:1, alt text, keyboard nav, aria-labels |
-| 2 | Touch & interaction | CRITICAL | Min 44×44px, 8px+ spacing, loading feedback |
-| 3 | Performance | HIGH | WebP/AVIF, lazy loading, CLS < 0.1 |
-| 4 | Style selection | HIGH | Match product type, consistency, SVG icons |
-| 5 | Layout & responsive | HIGH | Mobile-first, viewport meta, no horizontal scroll |
-| 6 | Typography & color | MEDIUM | Base 16px, line-height 1.5, semantic tokens |
-| 7 | Animation | MEDIUM | 150–300ms, motion conveys meaning, reduced-motion |
-| 8 | Forms & feedback | MEDIUM | Visible labels, error near field, progressive disclosure |
-| 9 | Navigation | HIGH | Predictable back, bottom nav ≤ 5, deep linking |
-| 10 | Charts & data | LOW | Legends, tooltips, accessible colors |
+Priority-ordered checks by category: [references/ux-rules-reference.md](references/ux-rules-reference.md).
 
 ---
 
@@ -880,44 +821,12 @@ Priority-ordered checks; full details in
 - **In code:** CSS custom properties for all tokens; test with real content (long
   names, missing images, edge cases, slow connections); load real typefaces
   rather than accepting system-font substitutes for display type. **When the
-  environment can render and screenshot: ALWAYS look at your own output before
+  environment can render and screenshot: always look at your own output before
   presenting it** — render, capture, and critique the actual pixels against both
   checklists. Overlaps, broken spacing, and timid scale are visible in a
   screenshot and invisible in source code.
 - **When researching:** study WHY a design works, never copy its identity.
   Research the product's INDUSTRY imagery and print/physical traditions, not just
   other websites — websites imitating websites is how sameness spreads.
-
----
-
-## Hard Rules (and Why)
-
-- **Never build without knowing who uses the interface** (non-trivial tasks) —
-  every decision depends on it; guessing wrong wastes the whole build.
-- **Never start visual decisions without a committed direction** — defaults
-  converge to sameness.
-- **Never present a screen without its states** (empty, loading, error, success,
-  edge cases) — real users spend most of their time in the states you didn't design.
-- **Never present a design you can't derive** — if no context fact explains a
-  choice, it's a default.
-- **Never shape a section without naming its job and offering an alternative** —
-  present the chosen pattern against at least one rejected candidate and the
-  failure condition that ruled it out. The first shape that comes to hand is the
-  most-seen shape, not the fittest one.
-- **Never leave motion unchosen by default** — a static element is a decision to
-  be stated, not the absence of one; and an animated element that answers no
-  reader question gets cut.
-- **Never ignore mobile; never make hover the only reveal; never bury essential
-  navigation; never build a flow without an escape route at every step.**
-- **No random spacing / arbitrary type sizes** — systems create the unconscious
-  trust polish is built on. **No pure #000/#FFF. Max 3 hues + neutrals.**
-- **Set line-height or tracking only via `typography_calc.py`** — never guess.
-- **Animate only `transform`/`opacity`.** **Never color as the only signal.**
-- **Never mix naming conventions in one project.**
-- **No large refactors during a live-site review without confirmation** —
-  minimal changes only; never skip the 375/768/1280/1920 responsive pass.
-- **Never default to the generic-AI look** (Inter on white, purple gradients,
-  centered-hero + three-column template) or converge on the same "safe" font or
-  palette across projects — every design is a new chance to commit.
 
 When another skill is more appropriate, say so directly.

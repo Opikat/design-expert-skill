@@ -1,5 +1,7 @@
 # Component Library
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 Specifications for common UI components. Read when building, reviewing,
 or standardizing component design.
 

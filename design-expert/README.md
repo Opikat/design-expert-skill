@@ -20,7 +20,7 @@ Activates for any design-related task: building distinctive interfaces, reviewin
 
 - **Design System Generator** — parallel search across a database of 161 palettes, 57 font pairings, 50+ UI styles, and 161 product types, with reasoning rules that select the best matches and can persist the result to `design-system/MASTER.md`
 - **Typography Calculator** (`typography_calc.py`) — precision line-height and letter-spacing values from real font metrics (xHeight, capHeight, capWidth) across 8000+ font styles; **always runs** instead of guessing
-- **UX Rules Quick Reference** — 99 prioritized rules covering accessibility, touch, performance, style, layout, typography, animation, forms, navigation, charts
+- **UX Rules Quick Reference** — 205 prioritized rules covering accessibility, touch, performance, style, layout, typography, animation, forms, navigation, charts
 - **Naming conventions** — Finsweet Client First (default) and BEM
 - **Live-site review workflow** — 6-step loop (gather → inspect → prioritize → fix → re-verify → report) at mobile/tablet/desktop/wide viewports
 - **Framework-specific fix patterns** — Pure CSS, SCSS, Tailwind, CSS Modules, styled-components/Emotion, Vue scoped styles, Next.js App Router
@@ -52,7 +52,7 @@ Say a profile pins a fintech client's palette to navy plus two neutrals, with a 
 - `patterns-and-flows.md` — pattern selection library stating when each works, fails, and is misused: onboarding, auth, forms, checkout, e-commerce, search, navigation, dashboards, settings, empty states, destructive actions, notifications, cross-industry transfer
 - `psychology-deep-dive.md` — decision psychology: worked principle-conflicts, same-brief-different-answers, persuasion mechanics and their ethical line, animation timing
 - `naming-conventions.md` — Client First and BEM naming rules with examples
-- `ux-rules-reference.md` — full 99-rule reference with implementation details
+- `ux-rules-reference.md` — full 205-rule reference with implementation details
 - `visual-checklist.md` — exhaustive visual inspection checklist for live-site review
 - `framework-fixes.md` — framework-specific source-level fix patterns
 
@@ -62,7 +62,6 @@ CSV databases powering the search scripts:
 
 - `colors.csv` — 161 color palettes with industry and mood tags
 - `typography.csv` — 57 font pairings with personality and use-case tags
-- `google-fonts.csv` — individual font database with variable weight support
 - `figma-fonts.csv` — 8000+ font styles with xHeight, capHeight, capWidth metrics
 - `products.csv` — 161 product type patterns
 - `styles.csv` — 50+ UI style definitions (glassmorphism, neubrutalism, etc.)
@@ -88,7 +87,7 @@ That's the whole install: the skill is self-contained (SKILL.md + references + d
 
 ### Setting up a profile
 
-The skill ships brand-agnostic. To layer your brand (or a client's) on top, copy [`profiles/PROFILE-TEMPLATE.md`](../profiles/PROFILE-TEMPLATE.md) (a filled-in example for a fictional brand sits next to it: [`profiles/EXAMPLE-tidewater-almanac.md`](../profiles/EXAMPLE-tidewater-almanac.md), and [`profiles/README.md`](../profiles/README.md) summarises what a profile decides and what it cannot change), fill in the brackets, and save it either as its own skill (`~/.claude/skills/<brand>-visuals/SKILL.md`) or as a doc your project's CLAUDE.md tells Claude to load after design-expert. Load order is fixed: base first, profile second — see "Profiles — layering a brand on top" above for the override contract.
+The skill ships brand-agnostic. To layer your brand (or a client's) on top, copy [`profiles/PROFILE-TEMPLATE.md`](profiles/PROFILE-TEMPLATE.md) (a filled-in example for a fictional brand sits next to it: [`profiles/EXAMPLE-tidewater-almanac.md`](profiles/EXAMPLE-tidewater-almanac.md), and [`profiles/README.md`](profiles/README.md) summarises what a profile decides and what it cannot change), fill in the brackets, and save it either as its own skill (`~/.claude/skills/<brand>-visuals/SKILL.md`) or as a doc your project's CLAUDE.md tells Claude to load after design-expert. Load order is fixed: base first, profile second — see "Profiles — layering a brand on top" above for the override contract.
 
 ## Credits
 

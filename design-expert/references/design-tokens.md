@@ -1,5 +1,7 @@
 # Design Tokens
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 Complete token scales for spacing, color, typography, shadows, and radii.
 Read when establishing or auditing a visual design system.
 
@@ -190,9 +192,6 @@ For subtle button micro-gradients (same hue, ±4% lightness) see
 
 /* Finance / energy / bitcoin */
 --grad-bitcoin: linear-gradient(135deg, #EA580C 0%, #F7931A 100%);
-
-/* Enterprise active states / premium */
---grad-indigo-violet: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
 
 /* Editorial / academia / luxury */
 --grad-brass: linear-gradient(135deg, #D4B872 0%, #C9A962 50%, #B8953F 100%);

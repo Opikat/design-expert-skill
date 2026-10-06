@@ -1,0 +1,208 @@
+
+######## claude-fable-5-1
+
+=== dashboard-1.html
+  font-family: ['-apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-ser']
+  font vars: {}
+  palette vars: [('--bg', '#f4f6fa'), ('--surface', '#ffffff'), ('--text', '#1a2233'), ('--primary', '#3b5bdb'), ('--primary-soft', '#e8edfc')]
+  transitions: ['background .15s', 'background .15s, color .15s']
+  animations: []
+  body font-size: ['14px']  letter-spacing on headings: ['-.01em', '-.02em', '.06em', '.08em']
+  sidebar: ['250px'] #141b2d  topbar h: []
+  greeting: ['Good morning, Elena']  stat cards: 0  table cols: ['Customer', 'Order', 'Date', 'Status', 'Amount']
+  search+bell+avatar: True True True  status badges: True  sparkline/chart: True  empty state: False
+
+=== dashboard-2.html
+  font-family: ['-apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-ser', 'inherit']
+  font vars: {}
+  palette vars: [('--bg', '#f4f6fa'), ('--surface', '#ffffff'), ('--text', '#1a2130'), ('--primary', '#4f46e5'), ('--primary-soft', '#eef2ff')]
+  transitions: ['background .15s, color .15s', 'opacity .15s']
+  animations: []
+  body font-size: ['14px']  letter-spacing on headings: ['-.01em', '-.02em', '.05em', '.08em']
+  sidebar: ['240px'] #111827  topbar h: ['64px']
+  greeting: []  stat cards: 0  table cols: ['Order', 'Customer', 'Date', 'Status', 'Amount']
+  search+bell+avatar: True True True  status badges: True  sparkline/chart: True  empty state: False
+
+=== dashboard-3.html
+  font-family: ['-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetic', 'inherit']
+  font vars: {}
+  palette vars: [('--bg', '#f4f6fa'), ('--surface', '#ffffff'), ('--text', '#111827'), ('--primary', '#4f46e5'), ('--primary-soft', '#eef2ff')]
+  transitions: ['background .15s', 'background .15s, box-shadow .15s', 'background .15s, color .15s']
+  animations: []
+  body font-size: ['14px']  letter-spacing on headings: ['-.01em', '-.02em', '.06em', '.08em']
+  sidebar: ['250px'] #111827  topbar h: []
+  greeting: ['Good morning, Elena']  stat cards: 0  table cols: ['Customer', 'Order', 'Date', 'Status', 'Amount']
+  search+bell+avatar: True True True  status badges: True  sparkline/chart: True  empty state: False
+
+=== diagram-1.html
+  font-family: ['-apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetic']
+  font vars: {}
+  palette vars: []
+  transitions: []
+  animations: []
+  body font-size: []  letter-spacing on headings: ['1.2px']
+  svg texts: ['How a design system works', 'One source of truth flows fr', '1 · FOUNDATIONS', '2 · LIBRARIES', '3 · COMPONENTS', '4 · PATTERNS', '5 · PRODUCTS', 'Design tokens', 'single source of truth', 'Color', 'Typography', 'Spacing', 'Radius · Motion', 'Design library', 'Figma styles &amp;', 'variables', 'used by designers', 'Code library', 'CSS variables, npm', 'package', 'used by engineers', 'kept in sync']
+  layers/bands: 24  arrows: True  vertical stack?: 19
+
+=== diagram-2.html
+  font-family: ['-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans']
+  font vars: {}
+  palette vars: []
+  transitions: []
+  animations: []
+  body font-size: []  letter-spacing on headings: ['.14em']
+  svg texts: ['How a design system works', 'Shared decisions flow from f', 'Feedback &amp; contribution', '1', 'Foundations', 'Design tokens', 'Color', 'Type', 'Aa', 'Aa', 'Aa', 'Aa', 'Spacing &amp; radius', 'Named values, one source of ', '2', 'Building blocks', 'Components', 'Button', 'Ghost', 'Input field', 'Badge', 'Reusable, accessible, tokens']
+  layers/bands: 57  arrows: True  vertical stack?: 31
+
+=== diagram-3.html
+  font-family: ['"Inter","SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Robo', 'inherit']
+  font vars: {}
+  palette vars: [('--bg', '#0f1117'), ('--ink', '#e8ebf2')]
+  transitions: []
+  animations: ['dash 1.6s linear infinite', 'none']
+  body font-size: []  letter-spacing on headings: ['.01em', '.08em']
+  svg texts: ['How a design system works', 'Decisions are made once at t', 'Wraps every layer', 'Documentation &amp; Governan', 'Usage guidelines &amp; dos/d', 'Accessibility standards', 'Versioning &amp; changelog', 'Contribution process', 'Design ↔ code parity', 'Who maintains it', 'Designers', 'Engineers', 'Product / Content', 'Accessibility', 'Core team + open', 'contributions from products', 'Layer 4 · Consume', 'Products', 'Teams assemble patterns into', 'real features and screens.', 'Web app', 'Mobile']
+  layers/bands: 67  arrows: True  vertical stack?: 25
+
+=== marketing-1.html
+  font-family: ['"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-s']
+  font vars: {}
+  palette vars: [('--bg', '#0b0f1a'), ('--surface', '#111827'), ('--surface-2', '#161f33'), ('--text', '#f1f5f9'), ('--accent', '#6ee7b7'), ('--accent-2', '#38bdf8')]
+  transitions: ['border-color .2s ease, transform .2s ease', 'transform .15s ease, background .15s ease, border-color .15s ease']
+  animations: []
+  body font-size: []  letter-spacing on headings: ['-0.01em', '-0.02em', '-0.035em', '-0.03em']
+  order: ['header', 'nav', 'section', 'section', 'section', 'section', 'section', 'footer']
+  kicker/eyebrow/badge in hero: True
+  logo strip: True  testimonial: True  faq: False  pricing tiers: 3  popular badge: True  dark cta band: True
+  hero h1: Invoicing that  runs itself  so you can run your business
+  browser chrome mock: False  screenshot/mock: True
+
+=== marketing-2.html
+  font-family: ['"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvet']
+  font vars: {}
+  palette vars: [('--bg', '#0b0d12'), ('--surface', '#12151d'), ('--surface-2', '#181c27'), ('--text', '#f2f4f8'), ('--accent', '#7c6cff'), ('--accent-2', '#4fd1c5'), ('--accent-grad', 'linear-gradient(135deg, #7c6cff 0%, #4fd1c5 100%)')]
+  transitions: ['border-color .2s, transform .2s', 'transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease']
+  animations: []
+  body font-size: []  letter-spacing on headings: ['-0.01em', '-0.02em', '-0.035em', '-0.03em']
+  order: ['header', 'nav', 'section', 'section', 'section', 'section', 'section', 'footer', 'nav']
+  kicker/eyebrow/badge in hero: True
+  logo strip: True  testimonial: True  faq: False  pricing tiers: 4  popular badge: True  dark cta band: True
+  hero h1: Customer support that  runs itself
+  browser chrome mock: False  screenshot/mock: True
+
+=== marketing-3.html
+  font-family: ['"Fraunces", Georgia, serif', '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif']
+  font vars: {'--font-display': '"Fraunces", Georgia, serif', '--font-body': '"Inter", -apple-system, BlinkMacSystemFont, "Segoe'}
+  palette vars: [('--bg', '#f6f3ec'), ('--bg-deep', '#ebe6da'), ('--ink', '#17191c'), ('--ink-soft', '#4b4f57'), ('--ink-mute', '#8a8e96'), ('--accent', '#1f6e4e'), ('--accent-ink', '#0f3d2b'), ('--accent-soft', '#d9ebdf')]
+  transitions: ['background .2s', 'transform .15s ease, background .15s ease, border-color .15s ease']
+  animations: []
+  body font-size: []  letter-spacing on headings: ['-0.015em', '-0.01em', '-0.02em', '-0.03em']
+  order: ['header', 'nav', 'section', 'section', 'section', 'section', 'section', 'section', 'footer']
+  kicker/eyebrow/badge in hero: True
+  logo strip: True  testimonial: True  faq: False  pricing tiers: 4  popular badge: True  dark cta band: True
+  hero h1: See next quarter's cash  before it happens.
+  browser chrome mock: False  screenshot/mock: True
+
+######## claude-opus-5-5
+
+=== dashboard-1.html
+  font-family: ['ui-monospace, "SF Mono", Menlo, Consolas, monospace', 'ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, "Helvetica Ne']
+  font vars: {'--font': 'ui-sans-serif, -apple-system, "Segoe UI", Inter, R', '--mono': 'ui-monospace, "SF Mono", Menlo, Consolas, monospac'}
+  palette vars: [('--bg', '#f4f2ee'), ('--surface', '#ffffff'), ('--ink', '#1c1b19'), ('--ink-2', '#57544e'), ('--ink-3', '#8d8980'), ('--accent', '#1f5f4a'), ('--accent-soft', '#e3eee9')]
+  transitions: ['background .15s, color .15s']
+  animations: []
+  body font-size: ['14px']  letter-spacing on headings: ['-0.01em', '-0.02em', '.08em']
+  sidebar: ['var(--sidebar)'] 232px  topbar h: []
+  greeting: []  stat cards: 4  table cols: ['Customer', 'Invoice', 'Due', 'Status', 'Amount', 'Actions']
+  search+bell+avatar: True True True  status badges: True  sparkline/chart: True  empty state: False
+
+=== dashboard-2.html
+  font-family: ['Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetic', 'inherit', 'ui-monospace, SFMono-Regular, Menlo, monospace']
+  font vars: {}
+  palette vars: [('--bg', '#f5f6f8'), ('--surface', '#ffffff'), ('--surface-2', '#f0f2f5'), ('--text', '#1b1f27'), ('--text-2', '#5b6474'), ('--text-3', '#8a93a3'), ('--accent', '#4f46e5'), ('--accent-soft', '#eef0ff')]
+  transitions: ['background .15s, color .15s', 'background .15s, transform .05s', 'border-color .15s, background .15s']
+  animations: []
+  body font-size: ['14px']  letter-spacing on headings: ['-.01em', '-.02em', '.06em', '.08em']
+  sidebar: ['248px'] #12151c  topbar h: ['64px']
+  greeting: []  stat cards: 0  table cols: ['Order', 'Customer', 'Date', 'Status', 'Amount', '']
+  search+bell+avatar: True True True  status badges: True  sparkline/chart: True  empty state: False
+
+=== dashboard-3.html
+  font-family: ['ui-monospace, "SF Mono", Menlo, Consolas, monospace', 'ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, "Helvetica Ne']
+  font vars: {'--font': 'ui-sans-serif, -apple-system, "Segoe UI", Inter, R', '--mono': 'ui-monospace, "SF Mono", Menlo, Consolas, monospac'}
+  palette vars: [('--bg', '#f4f2ee'), ('--surface', '#ffffff'), ('--ink', '#1b1d1c'), ('--ink-2', '#4a4f4c'), ('--accent', '#1f6f54'), ('--accent-2', '#2e8c6a'), ('--accent-soft', '#e3f0ea')]
+  transitions: ['.15s', 'background .12s', 'background .15s, color .15s']
+  animations: []
+  body font-size: ['14px']  letter-spacing on headings: ['-.01em', '-.02em', '.06em', '.08em']
+  sidebar: ['248px']   topbar h: []
+  greeting: []  stat cards: 0  table cols: ['Invoice', 'Client', 'Issued', 'Due', 'Status', 'Amount', '']
+  search+bell+avatar: True True True  status badges: True  sparkline/chart: True  empty state: False
+
+=== diagram-1.html
+  font-family: ['"Inter", "Segoe UI", system-ui, -apple-system, sans-serif', '"SF Mono", Menlo, Consolas, monospace']
+  font vars: {}
+  palette vars: []
+  transitions: []
+  animations: []
+  body font-size: []  letter-spacing on headings: []
+  svg texts: ['How a Design System Works', 'One shared source of truth —', 'Principles, Guidelines &amp;', 'The “why, when &amp; how” — ', '1', 'Foundations', 'Design tokens', 'Color', 'Typography', 'Aa', 'Inter', '16 / 24 · 600', 'Spacing &amp; radius', '/* tokens.json */', 'color.primary: #4F46E5', 'space.4: 16px', 'radius.md: 8px', '2', 'Components', 'Reusable building blocks', 'Button', 'Secondary']
+  layers/bands: 46  arrows: True  vertical stack?: 30
+
+=== diagram-2.html
+  font-family: ['system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-s', 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace']
+  font vars: {}
+  palette vars: []
+  transitions: []
+  animations: []
+  body font-size: []  letter-spacing on headings: ['0.08em']
+  svg texts: ['How a Design System Works', 'Small decisions become reusa', '1', 'Design Tokens', 'The core decisions, named &a', 'Color', 'color.primary = #4F46E5', 'Typography', 'Aa', 'font.heading = 32/40', 'font.body = 16/24', 'Spacing', '4–48', 'Radius · Shadow', '2', 'Components', 'Reusable UI built only from ', 'Button', 'Save', 'Cancel', 'Input', 'Email address']
+  layers/bands: 76  arrows: True  vertical stack?: 38
+
+=== diagram-3.html
+  font-family: ['"Inter", "Segoe UI", system-ui, -apple-system, sans-serif', '"SF Mono", Menlo, Consolas, monospace']
+  font vars: {}
+  palette vars: [('--bg', '#f6f7fb'), ('--ink', '#1c2233')]
+  transitions: []
+  animations: ['flow 1.2s linear infinite', 'none']
+  body font-size: []  letter-spacing on headings: ['.06em']
+  svg texts: ['How a Design System Works', 'Small, named decisions stack', '1', 'Principles &amp; Brand', 'The “why” behind every decis', 'Accessible', 'Consistent', 'On-brand voice', 'defines', '2', 'Design Tokens', 'Named values — the single so', 'Color', 'color.primary', 'Aa', 'Type', 'font.body', 'Spacing', 'space.md = 16', 'Radius', 'radius.sm = 4', 'Elevation']
+  layers/bands: 65  arrows: True  vertical stack?: 39
+
+=== marketing-1.html
+  font-family: ['"Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Geor', '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial', 'ui-monospace, "SF Mono", Menlo, Consolas, monospace']
+  font vars: {'--serif': '"Iowan Old Style", "Palatino Linotype", Palatino, ', '--sans': '-apple-system, BlinkMacSystemFont, "Segoe UI", "He', '--mono': 'ui-monospace, "SF Mono", Menlo, Consolas, monospac'}
+  palette vars: [('--paper', '#f4efe6'), ('--paper-2', '#ebe4d6'), ('--ink', '#1c1a17'), ('--ink-soft', '#57524a'), ('--accent', '#d9481c'), ('--accent-soft', '#f6d9cc')]
+  transitions: ['none !important', 'transform .15s ease', 'transform .15s ease, background .15s ease, color .15s ease', 'transform .2s']
+  animations: []
+  body font-size: []  letter-spacing on headings: ['-.015em', '-.04em', '.12em', '.1em']
+  order: ['header', 'nav', 'section', 'section', 'section', 'section', 'section', 'section', 'footer']
+  kicker/eyebrow/badge in hero: True
+  logo strip: True  testimonial: True  faq: True  pricing tiers: 4  popular badge: True  dark cta band: True
+  hero h1: Sign-offs,  without  the chasing.
+  browser chrome mock: False  screenshot/mock: True
+
+=== marketing-2.html
+  font-family: ['"Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Geor', 'ui-monospace, "SF Mono", Menlo, Consolas, monospace', 'ui-sans-serif, -apple-system, "Segoe UI", Inter, Helvetica, Arial, san']
+  font vars: {'--serif': '"Iowan Old Style", "Palatino Linotype", Palatino, ', '--sans': 'ui-sans-serif, -apple-system, "Segoe UI", Inter, H', '--mono': 'ui-monospace, "SF Mono", Menlo, Consolas, monospac'}
+  palette vars: [('--paper', '#f6f2ea'), ('--paper-2', '#ede7db'), ('--ink', '#1b1a17'), ('--ink-soft', '#57534a'), ('--accent', '#e0492b'), ('--accent-deep', '#b8361c')]
+  transitions: ['background .25s', 'color .2s', 'none !important', 'transform .15s, background .2s, color .2s, box-shadow .2s', 'transform .2s']
+  animations: []
+  body font-size: ['17px']  letter-spacing on headings: ['-0.01em', '-0.025em', '-0.02em', '.03em']
+  order: ['header', 'nav', 'section', 'section', 'section', 'section', 'footer', 'section', 'section', 'footer']
+  kicker/eyebrow/badge in hero: True
+  logo strip: True  testimonial: True  faq: True  pricing tiers: 10  popular badge: True  dark cta band: True
+  hero h1: Release notes your customers  actually read.
+  browser chrome mock: False  screenshot/mock: True
+
+=== marketing-3.html
+  font-family: ['"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,', 'ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace', 'ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto']
+  font vars: {'--serif': '"Iowan Old Style","Palatino Linotype",Palatino,"Bo', '--sans': 'ui-sans-serif,-apple-system,BlinkMacSystemFont,"Se', '--mono': 'ui-monospace,SFMono-Regular,Menlo,Consolas,"Libera'}
+  palette vars: [('--paper', '#f5f1e8'), ('--paper-2', '#ece6d8'), ('--ink', '#1b1a17'), ('--ink-2', '#4a463e'), ('--ink-3', '#7a7466'), ('--accent', '#d9480f'), ('--accent-ink', '#fff7f2')]
+  transitions: ['none!important', 'transform .15s ease,box-shadow .15s ease,background .15s ease', 'transform .25s ease', 'transform .2s ease,box-shadow .2s ease']
+  animations: ['bob 6s ease-in-out -3s infinite', 'bob 6s ease-in-out infinite', 'none!important']
+  body font-size: ['17px']  letter-spacing on headings: ['-.01em', '-.025em', '-.02em', '-.03em']
+  order: ['header', 'nav', 'section', 'section', 'section', 'section', 'section', 'section', 'section', 'section', 'footer']
+  kicker/eyebrow/badge in hero: True
+  logo strip: True  testimonial: True  faq: True  pricing tiers: 10  popular badge: True  dark cta band: True
+  hero h1: Ship the feature.  We'll write  the story.
+  browser chrome mock: False  screenshot/mock: True

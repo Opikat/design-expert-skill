@@ -1,0 +1,3 @@
+# Blank-brief measurement 2026-09-24
+
+Method: `run.sh <model> <surface> <n>` runs one headless `claude -p` session per brief (no tools, no skills, no CLAUDE.md, custom one-line system prompt), three runs per surface per model. `analyze.py` and `analyze2.py` extract fonts, palette, radii, transitions, grid, skeleton. `features*.txt` are the extracted results for Fable 5.1 and Opus 5.5 (raw HTML not kept). To re-measure: copy these scripts to a scratch folder, edit the model IDs in `jobs.txt`, run `xargs -P 6 -L 1 ./run.sh < jobs.txt`, then the two analyzers, and rewrite the Step 4 table in SKILL.md.

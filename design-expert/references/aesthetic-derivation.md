@@ -1,5 +1,7 @@
 # Aesthetic Derivation: The Uniqueness Engine
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 How to derive a distinctive visual direction from product context instead
 of converging on the default. Read when creating any new design from
 scratch or diagnosing why a design feels generic.
@@ -190,7 +192,7 @@ visual consistency dies.
 |---|---|---|
 | Photography | Unsplash, Pexels, Pixabay | One treatment across all photos (duotone in brand hues, uniform crop) so mixed sources read as one voice |
 | Illustration | unDraw (recolorable), Storyset, Open Peeps, Humaaans, DrawKit | Commit to ONE system per product, recolor to tokens; never mix styles |
-| Icons | Lucide, Tabler, Phosphor, Heroicons, Iconoir | One family, one weight (see SKILL.md Step 5) |
+| Icons | Lucide, Tabler, Phosphor, Heroicons, Iconoir | One family, one weight (see SKILL.md Step 10) |
 | Patterns / backgrounds | Hero Patterns, Haikei exports | Derive colors from the palette; patterns are texture, not decoration |
 | Avatars | DiceBear (seedable, many styles), Boring Avatars | Pick one style; seed by user ID for stability |
 | Typography | Google Fonts, Fontshare (General Sans, Clash, Satoshi, etc.) | Load the REAL typeface in every mockup -- never approximate a direction's voice with a default font |
@@ -215,15 +217,15 @@ in the handoff. "Found it online" is not a license.
 Create atmosphere and depth rather than defaulting to solid colors:
 
 - **Gradient meshes** -- large, soft, animated or static
-- **Noise textures** -- barely visible grain at 2-5% opacity prevents the
-  "flat CSS" feel
+- **Texture (noise, grain)** -- if texture is used at all, it must be a
+  deliberate, profile-approved choice; the 2-5% film grain is a banned
+  default (SKILL.md Step 4)
 - **Geometric patterns** -- dot grids, diagonal lines, subtle SVG textures
 - **Layered transparencies** -- stacked shapes with blend modes
 - **Dramatic shadows** -- colored, oversized, with offset that belongs to
   the direction
 - **Decorative borders** -- hatched, double-line, vintage
 - **Custom cursors** -- for immersive products only
-- **Grain overlays** -- film grain for warmth, digital noise for edge
 
 ---
 

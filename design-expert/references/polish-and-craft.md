@@ -1,5 +1,7 @@
 # Polish and Craft
 
+Bans in SKILL.md Step 4 win over any value in this file.
+
 Advanced visual techniques, animation patterns, and responsive details.
 Read when elevating an interface from functional to polished.
 
@@ -24,15 +26,11 @@ Tint shadows with the element's color for depth that feels real:
 }
 ```
 
-### 3. Subtle Background Texture
-Barely-visible noise prevents the "flat CSS" feel:
-```css
-.surface {
-  background-image: url("data:image/svg+xml,..."); /* noise pattern */
-  background-size: 200px;
-  opacity: 0.03;
-}
-```
+### 3. Background Texture (only when derived)
+Texture is permitted only as a deliberate, profile-approved choice sourced from
+the product's own material world (SKILL.md Step 2) — a ruled grid for a
+technical product, a paper fibre for a print-heritage one. No recipe here: the
+2–5% film-grain / noise overlay is a banned default (SKILL.md Step 4).
 
 ### 4. Border Light Effect (Dark Mode)
 1px semi-transparent white border adds definition:
@@ -75,10 +73,11 @@ Recessed feel on text fields:
 ```
 
 ### 8. Gradient Text (Sparingly)
-For hero headings only:
+For hero headings only, with stops from the product's own palette (the default
+indigo→pink `#6366F1 → #EC4899` is banned — Step 4):
 ```css
 .hero-heading {
-  background: linear-gradient(135deg, #6366F1, #EC4899);
+  background: linear-gradient(135deg, var(--accent-700), var(--accent-500));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -91,7 +90,7 @@ For hero headings only:
 ### Easing Functions
 ```css
 :root {
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);      /* entering */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);         /* entering — example; derive per direction (the default `cubic-bezier(0.16, 1, 0.3, 1)` is banned — Step 4) */
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);        /* exiting */
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);   /* repositioning */
   --spring: cubic-bezier(0.34, 1.56, 0.64, 1);     /* playful bounce */
@@ -101,7 +100,8 @@ For hero headings only:
 ### Common Transitions
 ```css
 /* Button interactions */
-.btn { transition: all 120ms var(--ease-out); }
+.btn { transition: transform 120ms var(--ease-out),
+                   background-color 120ms var(--ease-out); } /* name properties; never `all` */
 
 /* Card hover */
 .card { transition: transform 200ms var(--ease-out),
@@ -115,10 +115,12 @@ For hero headings only:
 }
 .modal { animation: modal-in 250ms var(--ease-out); }
 
-/* Fade in up (for page content) */
-@keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Content entrance: opacity only. A 12-16px rise is the banned measured
+   default (SKILL.md Step 4, Motion row). If the element needs travel, take it
+   from where it will act: Counter-entry in motion-patterns.md. */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Skeleton shimmer */
@@ -143,6 +145,140 @@ For hero headings only:
   }
 }
 ```
+
+---
+
+## Additional Motion Recipes
+
+Interface-motion craft for components (press, popover, tooltip, toast,
+drawer, tabs). Durations and the enter/exit easing rule stay as in SKILL.md
+Step 12; element choice stays in [motion-patterns.md](motion-patterns.md).
+
+### Should it animate at all — frequency first
+
+| How often the user sees it | Decision |
+|---|---|
+| 100+ times a day (keyboard shortcuts, command-palette toggle) | No animation |
+| Tens of times a day (hover effects, list navigation) | Remove or cut to a minimum |
+| Occasionally (modals, drawers, toasts) | Standard animation |
+| Rarely / first time (onboarding, celebrations) | Room for delight |
+
+Never animate keyboard-initiated actions: they repeat hundreds of times a day,
+and animation makes them feel delayed.
+
+### Named curves (pick per direction; none is a default)
+
+```css
+--ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1); /* on-screen movement, stronger than the built-in */
+--ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);         /* iOS-like sheet / drawer */
+```
+
+The built-in CSS keywords are weak; tune curves with easing.dev or
+easings.co rather than inventing them.
+
+### Press, origin, entry
+
+- **Press feedback:** `transform: scale(0.97)` on `:active`, `transition:
+  transform 160ms ease-out`. Keep it within 0.95–0.98 on the web.
+- **Never enter from `scale(0)`.** Start at `scale(0.95)` with `opacity: 0`;
+  nothing real appears from nothing.
+- **Origin-aware popovers:** scale from the trigger, not the centre —
+  `transform-origin: var(--radix-popover-content-transform-origin)` (Radix)
+  or `var(--transform-origin)` (Base UI). Modals are the exception: they are
+  not anchored to a trigger and stay centred.
+- **Tooltips:** delay the first one; once one is open, adjacent tooltips open
+  instantly with no animation (`transition-duration: 0ms` on a `data-instant`
+  state). The toolbar feels faster without losing the accidental-hover guard.
+- **Entry without JS:** `@starting-style { opacity: 0; transform:
+  translateY(100%); }` inside the element's rule replaces the
+  `useEffect → mounted` pattern; keep the `data-mounted` fallback where
+  support is missing.
+
+### Interruptible by default
+
+- **Transitions over keyframes for anything triggered rapidly** (toasts,
+  toggles): a transition retargets from its current value; a keyframe
+  animation restarts from zero.
+- **Springs for gestures and pointer-tracking:** they keep velocity when
+  interrupted. Web (Motion): `{ type: "spring", duration: 0.5, bounce: 0.2 }`;
+  keep bounce 0.1–0.3 and out of most routine UI. Smooth decorative
+  mouse-tracking with `useSpring(value, { stiffness: 100, damping: 10 })`
+  instead of binding it raw; functional readouts should not spring at all.
+- **Blur to bridge a crossfade** that still reads as two objects swapping:
+  `filter: blur(2px)` during the transition, never above 20px (expensive,
+  especially in Safari).
+
+### Transform and clip-path recipes
+
+- **`translateY(100%)` moves an element by its own height** — hide a drawer
+  or stack a toast without knowing its size. Prefer percentages to pixels.
+- **`scale()` scales children too** (text, icons) — intended for press states.
+- **`clip-path: inset(t r b l)`** animates on the compositor and needs no
+  extra DOM:
+  - *Reveal:* `inset(0 100% 0 0)` → `inset(0 0 0 0)`.
+  - *Tabs with exact colour transitions:* duplicate the tab list, style the
+    copy as active, clip it to the active tab, animate the clip on change.
+  - *Hold-to-delete:* coloured overlay clipped to `inset(0 100% 0 0)`; on
+    `:active` transition to `inset(0 0 0 0)` over 2s `linear`; on release
+    snap back in 200ms ease-out; add the press scale. Slow where the user
+    decides, fast where the system responds.
+  - *Image reveal on scroll:* `inset(0 0 100% 0)` → `inset(0 0 0 0)` when the
+    element enters the viewport (`IntersectionObserver`, once).
+  - *Comparison slider:* clip the top image with `inset(0 50% 0 0)` and drive
+    the right inset from the drag position.
+
+### Gestures and drag
+
+- **Dismiss on velocity, not only distance:** `velocity = |distance| /
+  elapsedMs`; dismiss when it exceeds ~0.11 even below the distance
+  threshold. A flick should be enough.
+- **Damping and friction at boundaries** instead of hard stops — the further
+  past the edge, the less the element moves.
+- **Pointer capture** once a drag starts, so it continues outside the bounds.
+- **Ignore extra touch points** after the drag begins, or the element jumps
+  when fingers switch.
+
+### Performance under load
+
+- **Do not drive per-frame motion through an inherited CSS variable** on a
+  container (`--swipe-amount`): every child recalculates styles. Set
+  `transform` on the element itself.
+- **Motion (Framer Motion) `x` / `y` / `scale` shorthands run on the main
+  thread** and drop frames while the page loads; pass a full `transform`
+  string for hardware acceleration.
+- **CSS animations beat JS under load** (they run off the main thread). Use
+  CSS for predetermined motion, JS for dynamic and interruptible motion, and
+  the Web Animations API (`element.animate(...)`) when JS needs control with
+  CSS performance.
+
+### Accessibility nuances
+
+- Reduced motion means fewer and gentler, not necessarily zero: keep opacity
+  and colour transitions that aid comprehension, drop movement and position.
+- Gate hover motion behind `@media (hover: hover) and (pointer: fine)` —
+  touch devices fire hover on tap.
+
+### Invisible edge cases and debugging
+
+- Pause toast timers while the tab is hidden; fill gaps between stacked items
+  with pseudo-elements so hover state does not flicker.
+- Debug at 2–5× duration or frame by frame (DevTools Animations panel):
+  check that colours blend rather than overlap, the origin is right, and
+  opacity / transform / colour stay in sync.
+- Test gestures on a real device (local dev server by IP + remote devtools),
+  and re-watch motion the next day with fresh eyes.
+
+### Quick review checks
+
+| Issue | Fix |
+|---|---|
+| `transition: all` | Name the properties |
+| `scale(0)` entry | `scale(0.95)` + `opacity: 0` |
+| Popover scales from centre | Trigger origin (modals exempt) |
+| Animation on a keyboard action | Remove it |
+| Hover motion without a media query | `@media (hover: hover) and (pointer: fine)` |
+| Keyframes on a rapidly triggered element | Transition instead |
+| Motion `x`/`y` under load | Full `transform` string |
 
 ---
 
@@ -283,6 +419,6 @@ className="shadow-[4px_4px_0_0_#000]
 
 ### Platform Notes
 
-- Web's `cubic-bezier(0.16, 1, 0.3, 1)` ≈ `SPRING_STANDARD` — use web easing for timing-based transitions (opacity, color), spring for spatial ones (scale, translate).
+- Web's `--ease-out` ≈ `SPRING_STANDARD` — use web easing for timing-based transitions (opacity, color), spring for spatial ones (scale, translate).
 - Never animate `width`/`height` on native either — use `scale` or `flex`.
 - Respect `AccessibilityInfo.isReduceMotionEnabled()` — fall back to opacity-only.
