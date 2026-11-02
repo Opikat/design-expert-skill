@@ -1,0 +1,5 @@
+# Motion recipe skeleton check 2026-11-02
+
+Method: `build_test.py` copies every `css`, `html` and `js` block of `references/motion-recipes.md` into one test page, so the page tests exactly what the reference documents. `run_test.js` drives that page with Playwright in four contexts (motion allowed, reduced motion emulated, script disabled, touch phone) and checks end states, geometry (the ring radius, the dot on its path with the viewBox scaled ×2, the rail's fill edge on the viewport's middle line, the rail at the end of a page), inert hit-testing and the no-script fallbacks. `results.json` holds the outcome: 38 of 38 checks pass in Chromium 151. WebKit and Firefox have not been run.
+
+To re-run: from this folder, `python3 build_test.py ../../../references/motion-recipes.md index.html && mkdir -p shots && node run_test.js index.html shots`. It needs `playwright-core` with the matching browser installed; `PLAYWRIGHT_CORE=<path>` points at a copy outside the module path, and `BROWSER=webkit` or `BROWSER=firefox` switches the engine. Rebuild the page after every edit to the recipes, and update the status line at the top of `motion-recipes.md` with the result.

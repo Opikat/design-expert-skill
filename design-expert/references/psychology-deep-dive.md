@@ -177,17 +177,20 @@ Persuasion survives transparency; manipulation doesn't.
 | Tooltip appear | 150-200ms | ease-out |
 | Dropdown open | 200-250ms | ease-out |
 | Modal enter | 250-300ms | ease-out |
-| Modal exit | 200ms | ease-in |
+| Modal exit | 100-150ms, or instant | ease-in |
 | Page transition | 300-400ms | ease-in-out |
 | Skeleton shimmer | 1500ms loop | linear |
-| Stagger between items | 50-80ms | -- |
+| Stagger between items | 30-80ms, ≤300ms total (product); 50-90ms, ≤500ms total (marketing) | -- |
 
 Rules:
 - Closing faster than opening -- leaving must feel effortless
-- Linear easing only for continuous loops (progress, shimmer); everywhere
-  else it reads as mechanical
-- Animate only `transform` and `opacity` (GPU-accelerated)
-- `prefers-reduced-motion: reduce` → remove all non-essential animation
+- Linear easing only for continuous loops (progress, shimmer), scroll-driven
+  progress and a dot travelling a path once; everywhere else it reads as
+  mechanical
+- Animate `transform` and `opacity` (GPU-accelerated); colour on small controls
+  is fine; never layout properties
+- `prefers-reduced-motion: reduce` → nothing travels; the replacement (an
+  opacity crossfade up to 200ms, or instant) is the profile's call
 
 CSS easing values:
 ```css

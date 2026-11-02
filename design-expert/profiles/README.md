@@ -19,7 +19,7 @@ skill first, the profile second.
 
 ## What a profile decides
 
-Tokens and identity (palette, radius, borders, density), type roles and per-medium size floors, format and layout defaults, component or diagram vocabulary, copy tone on visuals, workflow and export, and which one signature element the brand repeats.
+Tokens and identity (palette, radius, borders, density), type roles and per-medium size floors, format and layout defaults, component or diagram vocabulary, copy tone on visuals, workflow and export, motion (character, tokens, route, the reduced-motion replacement), and which one signature element the brand repeats.
 
 ## What a profile cannot change
 

@@ -42,6 +42,7 @@ Your job is to select the right depth for the task — **scale to scope**:
 | **Naming** (CSS classes, components) | Apply `references/naming-conventions.md`. |
 | **Shaping a section** (how a set of links, a sequence, a comparison, a proof is composed) | Name the job, then choose from `references/section-patterns.md` — never default to a card grid. |
 | **Choosing a motion element** (what animates, not how fast) | Name the job, then choose from `references/motion-patterns.md`; write the reduced-motion end state first. |
+| **Adding motion to a page or site** (where it goes, how much) | Step 0 (mode, profile), then `references/motion-site-pass.md`: inventory, budget and a motion map with rejected candidates before any code; techniques from `references/motion-recipes.md`. Steps 1–8 only when the page itself is being designed. |
 | **Stuck, or the first idea arrived too fast** | Name 2–3 specific places to look and the question to ask at each — `references/reference-sources.md` — and offer to capture them side by side. |
 
 The numbered steps are a checklist of what expert work considers, not a script
@@ -79,6 +80,10 @@ off-brand craft. Both are failures.
   moves the brand owns.
 - **Pinned type values:** profile-pinned sizes/line-heights win over the
   typography calculator; the calculator fills only what the profile leaves open.
+- **Motion:** character (how the brand's adjectives become easing, amplitude
+  and properties), duration/easing/stagger tokens, the platform route and
+  library, the reduced-motion replacement, and the motion budget, except its
+  accessibility rows, which are floors.
 
 ### What a profile may NEVER override (the floor)
 
@@ -172,6 +177,10 @@ rather than perceptual judgement — offer it before offering visuals.
 **When the system conflicts with craft** (a brand color that fails AA contrast,
 a spacing scale with gaps): flag the conflict and propose the fix — don't
 silently "correct" someone's system, and don't silently ship the violation.
+
+**A motion pass over an existing page or site** is not a mode of its own: it
+runs inside the page's mode (usually B, with the profile's Motion section as
+the system) through `references/motion-site-pass.md`.
 
 ## Step 1: Understand the Human (Gate, Scaled to Scope)
 
@@ -336,7 +345,9 @@ The 2026-07 Sonnet 5 defaults (Inter first everywhere, Lucide, `cubic-bezier(0.1
 0.3, 1)` 400ms with translateY 12–16px, 4% grain, `No data yet`) did not appear once
 in 18 runs. They stay banned as known fallbacks: a ban only moves the answer down the
 ranking — the replacement has to be derived (Step 2) or chosen (Step 5), never
-defaulted.
+defaulted. The motion ban covers the unprompted uniform fade-up, not travel as
+such: an 8–16px rise is a choice when the motion map gives that entrance a job
+and it stays under the uniformity thresholds (`references/motion-site-pass.md`).
 
 ### The banned skeletons
 
@@ -654,12 +665,17 @@ Motion is UX, not decoration. Every animation must answer a question: where did
 this come from, what changed, did my action work, or what should I look at? If
 it answers none, cut it.
 
-- Micro-interactions 100–150ms; panels 200–300ms; page transitions 300–500ms.
-  Closing is always faster than opening.
+- Micro-interactions 100–150ms; panels 200–300ms; page transitions 300–400ms.
+  Marketing reveals 200–400ms; one lead reveal up to 800ms (a technique that
+  plays along a path or counts a value takes its recipe's duration); nothing
+  in view stays hidden past 900ms. Closing is always faster than opening.
 - Ease-out entering, ease-in leaving, ease-in-out repositioning. Linear reads as
-  mechanical — reserve it for continuous loops (progress, shimmer).
-- Animate ONLY `transform` and `opacity` (width/height/top/left cause reflow
-  jank). Design every interactive element in all its states.
+  mechanical — reserve it for continuous loops (progress, shimmer), a dot
+  travelling a path once, and anything driven by scroll position.
+- Animate `transform` and `opacity`; colour on small controls and
+  `offset-distance` on one small element are fine too. Never animate layout
+  properties (width/height/top/left/margin): they cause reflow jank. Design
+  every interactive element in all its states.
 - Scale ceremony inversely with frequency: first-time delight, hundredth-time
   invisible.
 
@@ -668,13 +684,25 @@ choice of motion element is its own decision, made the same way as a section's
 shape — name the job (entrance, scroll progress, pointer response, state change,
 ambient, view transition, value change), then pick two candidates from
 [references/motion-patterns.md](references/motion-patterns.md) and reject on
-failure conditions. That file also carries the implementation ladder: CSS first,
-then native scroll-driven animations and View Transitions, then a little vanilla
-JS, and only then a library — reaching for an animation runtime to fade
-something in is a tell. Component-level recipes (press, popover origin, tooltips,
+failure conditions. That file also carries the implementation ladder: the
+platform's own effects when the profile names one, then CSS, native
+scroll-driven animations and View Transitions, then a little vanilla JS, and
+only then the library the profile names — reaching for an animation runtime to
+fade something in is a tell. Component-level recipes (press, popover origin, tooltips,
 clip-path, gestures, performance under load):
 [references/polish-and-craft.md](references/polish-and-craft.md) → Additional
 Motion Recipes.
+
+**Whole pages start with a pass, not an element.** When the task is to add
+motion to a page or a site, run
+[references/motion-site-pass.md](references/motion-site-pass.md) before choosing
+any element: inventory, visitor mode, one job per section, the gate, the budget,
+and a motion map with rejected candidates. Every section starts at no motion.
+Techniques the vocabulary names but does not build (split text, 3D, path dots,
+scroll-linked rails) are in
+[references/motion-recipes.md](references/motion-recipes.md). Prove what shipped
+with the pass's checklist (live animation lists, a reduced-motion run, a
+no-script run), not by eye; what you did not watch stays unverified.
 
 **Write the reduced-motion end state before building the motion.** If you cannot
 describe what the element looks like standing still, the pattern isn't finished.
@@ -684,7 +712,8 @@ A static element is a decision to state, not the absence of one.
 ## Step 13: Apply Polish
 
 Polish amplifies a direction; it never substitutes for one. Use those that FIT
-the chosen direction: staggered entrances (50–80ms), shadows tinted with the
+the chosen direction: staggered entrances (30–80ms steps and ≤300ms in total in
+product UI, ≤500ms in total on marketing pages), shadows tinted with the
 surface's hue, nested radii, inset shadows on inputs, backdrop blur on sticky
 bars, consistent icon optics. Dark mode is its own palette, never an inversion:
 desaturate accents (saturated color vibrates on dark), lighter surfaces = higher

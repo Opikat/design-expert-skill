@@ -158,7 +158,7 @@ Complete reference of all 205 UX, interaction, and design guidelines organized b
 - `parallax-subtle` - Use parallax sparingly; must respect reduced-motion and not cause disorientation (Apple HIG)
 - `spring-physics` - Prefer spring/physics-based curves over linear or cubic-bezier for natural feel (Apple HIG fluid animations)
 - `exit-faster-than-enter` - Exit animations shorter than enter (~60–70% of enter duration) to feel responsive (MD motion)
-- `stagger-sequence` - Stagger list/grid item entrance by 30–50ms per item; avoid all-at-once or too-slow reveals (MD)
+- `stagger-sequence` - Stagger like items with one shared step: 30–80ms per item and ≤300ms total in product UI, 50–90ms and ≤500ms total on marketing pages; over ~8 items the group enters whole (motion-site-pass.md)
 - `shared-element-transition` - Use shared element / hero transitions for visual continuity between screens (MD, HIG)
 - `interruptible` - Animations must be interruptible; user tap/gesture cancels in-progress animation immediately (Apple HIG)
 - `no-blocking-animation` - Never block user input during an animation; UI must stay interactive (Apple HIG)

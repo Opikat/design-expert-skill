@@ -20,3 +20,7 @@ python3 scripts/search.py "<keyword>" --stack <react|nextjs|angular|flutter|svel
 Domains: `product`, `style`, `color`, `typography`, `icons`, `chart`, `ux`,
 `landing`, `react`, `web`. The generator selects matches by reasoning rules; it
 supplies raw material for Steps 2–5, it does not replace the divergence.
+
+The `Key_Effects` it returns (parallax, scroll animations, page transitions) are
+candidates for [motion-site-pass.md](motion-site-pass.md), not decisions: each
+one still needs a job, the gate and room in the budget.
