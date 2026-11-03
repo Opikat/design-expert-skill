@@ -89,6 +89,30 @@ distinctive rule/border language, one unexpected color pairing, a custom
 underline. The base skill enforces exactly one signature per artifact —
 this profile decides WHICH one it is.]
 
+## Motion
+
+<!-- The base skill decides HOW motion is chosen: the site pass in
+references/motion-site-pass.md (one job per section, the gate, the budget,
+the motion map). The profile supplies the brand's motion values. A line left
+out falls back to the base default. -->
+
+- **Character:** [2–3 brand adjectives translated into motion, e.g. "precise →
+  short distances, ease-out, no overshoot; calm → one property at a time"]
+- **Surfaces:** [which surfaces persuade (marketing, portfolio) and which are
+  operated or read (product UI, docs)]
+- **Vocabulary:** [allowed patterns and the one lead gesture, e.g. "line draw;
+  one travelling dot as the lead"]. **Never:** [e.g. "fade-up on every block,
+  bounce, decorative loops"]
+- **Tokens:** durations [`--dur-fast 120ms`, …], easing [`--ease-out …`],
+  stagger step [e.g. 60ms], entrance travel [e.g. 12px, 8px on phones]
+- **Route:** [where motion is built, e.g. "the site builder's own effects
+  first, custom code only for the path dot" or "coded site: CSS first, then
+  library X"]
+- **Reduced motion:** [the replacement: "opacity crossfade ≤200ms" or
+  "instant"]
+- **Budget overrides:** [e.g. "no lead moment on docs pages"; accessibility
+  rows can only get stricter]
+
 ## Copy on visuals
 
 [Tone rules for text inside graphics, e.g. "plain factual labels, no

@@ -10,7 +10,9 @@ Read when elevating an interface from functional to polished.
 ## The Details That Separate Good from Great
 
 ### 1. Staggered Animations
-Multiple elements appearing together should stagger by 50-80ms:
+Like elements appearing together stagger with one shared step: 30-80ms and
+300ms in total in product UI; 50-90ms and 500ms in total on marketing pages.
+Over ~8 items, show the group at once:
 ```css
 .card:nth-child(1) { animation-delay: 0ms; }
 .card:nth-child(2) { animation-delay: 60ms; }
@@ -104,20 +106,22 @@ indigo→pink `#6366F1 → #EC4899` is banned — Step 4):
                    background-color 120ms var(--ease-out); } /* name properties; never `all` */
 
 /* Card hover */
-.card { transition: transform 200ms var(--ease-out),
-                    box-shadow 200ms var(--ease-out); }
+.card { transition: transform 150ms var(--ease-out),
+                    box-shadow 150ms var(--ease-out); }
 .card:hover { transform: translateY(-2px); }
 
 /* Modal enter */
 @keyframes modal-in {
-  from { opacity: 0; transform: scale(0.95) translateY(8px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+  from { opacity: 0; transform: scale(0.96); } /* centred: no slide */
+  to { opacity: 1; transform: scale(1); }
 }
 .modal { animation: modal-in 250ms var(--ease-out); }
 
-/* Content entrance: opacity only. A 12-16px rise is the banned measured
-   default (SKILL.md Step 4, Motion row). If the element needs travel, take it
-   from where it will act: Counter-entry in motion-patterns.md. */
+/* Content entrance: opacity first. A rise (8-16px, less on phones) only when
+   the motion map gives this entrance a job (motion-site-pass.md); the same
+   rise on every block is the banned uniform default (SKILL.md Step 4). If the
+   element needs travel, take it from where it will act: Counter-entry in
+   motion-patterns.md. */
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -160,7 +164,7 @@ Step 12; element choice stays in [motion-patterns.md](motion-patterns.md).
 |---|---|
 | 100+ times a day (keyboard shortcuts, command-palette toggle) | No animation |
 | Tens of times a day (hover effects, list navigation) | Remove or cut to a minimum |
-| Occasionally (modals, drawers, toasts) | Standard animation |
+| Occasionally (modals, drawers; a toast takes the frequency of the action that triggered it) | Standard animation |
 | Rarely / first time (onboarding, celebrations) | Room for delight |
 
 Never animate keyboard-initiated actions: they repeat hundreds of times a day,
@@ -179,7 +183,7 @@ easings.co rather than inventing them.
 ### Press, origin, entry
 
 - **Press feedback:** `transform: scale(0.97)` on `:active`, `transition:
-  transform 160ms ease-out`. Keep it within 0.95–0.98 on the web.
+  transform 120ms ease-out`. Keep it within 0.95–0.98 on the web.
 - **Never enter from `scale(0)`.** Start at `scale(0.95)` with `opacity: 0`;
   nothing real appears from nothing.
 - **Origin-aware popovers:** scale from the trigger, not the centre —
@@ -253,8 +257,9 @@ easings.co rather than inventing them.
 
 ### Accessibility nuances
 
-- Reduced motion means fewer and gentler, not necessarily zero: keep opacity
-  and colour transitions that aid comprehension, drop movement and position.
+- Reduced motion means fewer and gentler, not necessarily zero: drop movement
+  and position; keep colour on controls; an opacity crossfade (≤200 ms) only on
+  persuasive surfaces or where the profile allows it (motion-site-pass.md).
 - Gate hover motion behind `@media (hover: hover) and (pointer: fine)` —
   touch devices fire hover on tap.
 

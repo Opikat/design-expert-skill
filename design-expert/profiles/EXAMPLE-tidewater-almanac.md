@@ -77,6 +77,22 @@ display size, bleeding off the top edge of the dark tide strip, with the time
 in mono beneath it. Every artifact carries exactly one such numeral; nothing
 else on the page competes for scale.
 
+## Motion
+
+- **Character:** a printed table you trust: precise and quiet. Short
+  distances, ease-out, no overshoot, one property at a time.
+- **Surfaces:** the almanac's landing and feature pages persuade; the tide
+  tables and the archive are read.
+- **Vocabulary:** the chart hairlines draw once on first view; the
+  current-hour marker travels along the day's tide curve as the lead gesture.
+  **Never:** fade-up on every block, wave or bob loops, parallax.
+- **Tokens:** 120ms and 240ms, `ease-out` only; stagger step 60ms; entrance
+  travel 8px.
+- **Route:** coded site, CSS first; no animation library.
+- **Reduced motion:** opacity crossfade of 150ms; hairlines and the marker
+  render in their final positions.
+- **Budget overrides:** no motion at all on tide tables or in the newsletter.
+
 ## Copy on visuals
 
 Labels state facts: "High 4.2 m 06:14", "Wind NW 18 kn". No exclamation

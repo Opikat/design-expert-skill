@@ -1,0 +1,230 @@
+[
+  {
+    "ctx": "motion",
+    "name": "5 dot: paused at the path start until in view",
+    "ok": true,
+    "detail": "{\"state\":\"paused\",\"t\":0,\"d\":0}"
+  },
+  {
+    "ctx": "motion",
+    "name": "5 dot without data-inview (above the fold) runs on load",
+    "ok": true,
+    "detail": "running"
+  },
+  {
+    "ctx": "motion",
+    "name": "1 split: aria-label, 6 aria-hidden words",
+    "ok": true,
+    "detail": "Every invoice finds its way home"
+  },
+  {
+    "ctx": "motion",
+    "name": "1 split: words end at rest inside their masks",
+    "ok": true,
+    "detail": "none none none none none none"
+  },
+  {
+    "ctx": "motion",
+    "name": "1 split: six transform transitions ran, last delay 250ms",
+    "ok": true,
+    "detail": "runs 6, last delay 0.25s"
+  },
+  {
+    "ctx": "motion",
+    "name": "1 split: last word in place within 900 ms of the trigger",
+    "ok": true,
+    "detail": "0.65s"
+  },
+  {
+    "ctx": "motion",
+    "name": "1 split: word positions match the unsplit heading (≤1px)",
+    "ok": true,
+    "detail": "[[0,0],[0.03,0],[0.05,0],[0.06,0],[0.09,0],[0.11,0]] h 48.390625/48.390625"
+  },
+  {
+    "ctx": "motion",
+    "name": "2 flip: front hit-tested before the flip, back inert",
+    "ok": true,
+    "detail": "{\"hit\":\"face front\",\"backInert\":true}"
+  },
+  {
+    "ctx": "motion",
+    "name": "2 flip: rotated 180°, inert swapped, label updated, back is hit",
+    "ok": true,
+    "detail": "{\"flipped\":true,\"m\":\"matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)\",\"frontInert\":true,\"backInert\":false,\"label\":\"Show front\",\"hit\":\"face back\"}"
+  },
+  {
+    "ctx": "motion",
+    "name": "3 tilt: ±8° at the corner, reset on leave",
+    "ok": true,
+    "detail": "rx 7.92deg, ry -7.95deg, after leave \"\""
+  },
+  {
+    "ctx": "motion",
+    "name": "4 ring: front face at true size, neighbours share its edges (radius formula)",
+    "ok": true,
+    "detail": "{\"cells\":[[530,750,220],[750,824.8,74.8],[719.6,824.8,105.1],[560.4,719.6,159.3],[455.2,560.4,105.1],[455.2,530,74.8]],\"ringCenter\":640,\"display\":\"block\",\"front\":\"1\"}"
+  },
+  {
+    "ctx": "motion",
+    "name": "4 ring: two Next clicks bring face 3 to the front",
+    "ok": true,
+    "detail": "{\"front2\":[530,750,220],\"center\":640,\"hit\":\"3\"}"
+  },
+  {
+    "ctx": "motion",
+    "name": "4 tilt-in: view timeline, tilts while entering, flat once inside",
+    "ok": true,
+    "detail": "[[\"ViewTimeline\",\"matrix3d(1, 0, 0, 0, 0, 0.978681, 0.2053\"],[\"ViewTimeline\",\"matrix3d(1, 0, 0, 0, 0, 0.997616, 0.0690\"],[\"ViewTimeline\",\"matrix(1, 0, 0, 1, 0, 0)\"],[\"ViewTimeline\",\"matrix(1, 0, 0, 1, 0, 0)\"]]"
+  },
+  {
+    "ctx": "motion",
+    "name": "5 dot: one finite 3.5 s run, starts on entering view",
+    "ok": true,
+    "detail": "{\"running\":\"running\",\"iterations\":1,\"duration\":3500,\"scale\":2,\"res\":{\"1\":0,\"0.25\":0.009767973140699396,\"0.5\":0.000091552734375},\"stops\":[\"rgb(255, 255, 255)\",\"rgb(63, 182, 255)\",\"rgb(63, 182, 255)\"],\"attrVar\":\"rgb(63, 182, 255)\",\"inView\":true}"
+  },
+  {
+    "ctx": "motion",
+    "name": "5 dot: on the path at 25/50/100% with the SVG scaled ×2 (≤1px)",
+    "ok": true,
+    "detail": "{\"1\":0,\"0.25\":0.009767973140699396,\"0.5\":0.000091552734375}"
+  },
+  {
+    "ctx": "motion",
+    "name": "5 dot: themed gradient stops come from CSS",
+    "ok": true,
+    "detail": "rgb(255, 255, 255) | rgb(63, 182, 255) | rgb(63, 182, 255)"
+  },
+  {
+    "ctx": "motion",
+    "name": "5 probe: var() in a presentation attribute resolves in Chromium (no gotcha to document)",
+    "ok": true,
+    "detail": "stop-color=\"var(--glow)\" computes to rgb(63, 182, 255)"
+  },
+  {
+    "ctx": "motion",
+    "name": "6 rail: for a tall sequence the fill edge stays on the middle line (≤2px)",
+    "ok": true,
+    "detail": "450 450 450 450 450 450 450 450 450 450 450 450 450 450"
+  },
+  {
+    "ctx": "motion",
+    "name": "6 rail: view timeline; fill grows 0→1 with scroll",
+    "ok": true,
+    "detail": "0 0 0 0.104 0.243 0.382 0.521 0.66 0.799 0.938 1"
+  },
+  {
+    "ctx": "motion",
+    "name": "6 rail: unwinds on scroll-up",
+    "ok": true,
+    "detail": "0.938 0.799 0.66 0.521 0.382 0.243 0.104 0 0 0"
+  },
+  {
+    "ctx": "motion",
+    "name": "6 rail: marker dot sits at the fill edge",
+    "ok": true,
+    "detail": "0/0 0/0 0/0 0.104/0.104 0.243/0.243 0.382/0.382 0.521/0.521 0.66/0.66 0.799/0.799 0.938/0.938 1/1 0.938/0.938 0.799/0.799 0.66/0.66 0.521/0.521 0.382/0.382 0.243/0.243 0.104/0.104 0/0 0/0 0/0"
+  },
+  {
+    "ctx": "motion",
+    "name": "6 rail at page end: exit 50% stops part-filled, contain 100% completes",
+    "ok": true,
+    "detail": "exit 50%: 0.721, contain 100%: 1"
+  },
+  {
+    "ctx": "motion",
+    "name": "no page errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ctx": "reduced",
+    "name": "1 split: not split, visible at load",
+    "ok": true,
+    "detail": "{\"spans\":0,\"split\":true,\"vis\":\"visible\",\"label\":null}"
+  },
+  {
+    "ctx": "reduced",
+    "name": "2 flip: inert back face lets the front take the hit",
+    "ok": true,
+    "detail": "face front"
+  },
+  {
+    "ctx": "reduced",
+    "name": "2 flip: no 3D, crossfade to the back (mid-fade seen)",
+    "ok": true,
+    "detail": "{\"m\":\"none\",\"back\":\"1\",\"front\":\"0\",\"hit\":\"face back\",\"label\":\"Show front\",\"mid\":0.345894}"
+  },
+  {
+    "ctx": "reduced",
+    "name": "3 tilt: no properties written, no transform",
+    "ok": true,
+    "detail": "{\"css\":\"\",\"m\":\"none\"}"
+  },
+  {
+    "ctx": "reduced",
+    "name": "4 ring: plain row, Next scrolls the row",
+    "ok": true,
+    "detail": "{\"r0\":{\"d\":\"flex\",\"m\":\"none\",\"sl\":0},\"r1\":{\"sl\":240,\"i\":\"3\",\"v\":\"\"}}"
+  },
+  {
+    "ctx": "reduced",
+    "name": "5 dot: no animation, rests at the path end",
+    "ok": true,
+    "detail": "{\"anims\":0,\"d\":0}"
+  },
+  {
+    "ctx": "reduced",
+    "name": "6 rail and 4 tilt-in: no scroll animations, rail fully drawn",
+    "ok": true,
+    "detail": "{\"anims\":0,\"s\":1,\"tilt\":0}"
+  },
+  {
+    "ctx": "reduced",
+    "name": "only opacity transitions ran on the whole page",
+    "ok": true,
+    "detail": "[]"
+  },
+  {
+    "ctx": "reduced",
+    "name": "no page errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ctx": "no script",
+    "name": "1 split: heading visible, untouched",
+    "ok": true,
+    "detail": "{\"vis\":\"visible\",\"spans\":0}"
+  },
+  {
+    "ctx": "no script",
+    "name": "2 flip: button hidden, both faces readable in flow",
+    "ok": true,
+    "detail": "{\"btn\":\"none\",\"stacked\":true,\"backH\":192}"
+  },
+  {
+    "ctx": "no script",
+    "name": "4 ring: scrollable row, buttons hidden",
+    "ok": true,
+    "detail": "{\"d\":\"flex\",\"btn\":\"none\"}"
+  },
+  {
+    "ctx": "no script",
+    "name": "5 dot: plays on load and ends at the path end",
+    "ok": true,
+    "detail": "0"
+  },
+  {
+    "ctx": "no script",
+    "name": "6 rail: scroll-driven fill works without script",
+    "ok": true,
+    "detail": "0.451389"
+  },
+  {
+    "ctx": "touch phone",
+    "name": "3 tilt: gate closed on touch, tap writes nothing",
+    "ok": true,
+    "detail": "{\"gate\":false,\"css\":\"\",\"m\":\"none\"}"
+  }
+]

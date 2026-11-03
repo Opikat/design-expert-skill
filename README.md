@@ -31,7 +31,7 @@ This skill is brand-agnostic by design — it owns the *process* (understanding 
 
 A **profile** is a separate, small doc or skill that supplies one brand's specifics: palette, typefaces, spacing personality, a signature visual device, format defaults, workflow and tooling. Load this skill first, the profile second — the profile enters the process as the "existing system" the base works from.
 
-**A profile can change:** tokens and identity, typography roles and size floors per medium, format/layout defaults, component or diagram vocabulary, copy tone, workflow and medium, which signature move the brand owns.
+**A profile can change:** tokens and identity, typography roles and size floors per medium, format/layout defaults, component or diagram vocabulary, copy tone, motion values (character, tokens, route, the reduced-motion replacement), workflow and medium, which signature move the brand owns.
 
 **A profile can never change:** the process itself (diverge-before-converge, understanding the user first), the banned generic-AI starting points, accessibility floors, flow/diagram readability, the one-signature rule. A profile may only *tighten* these, never loosen them.
 
@@ -39,14 +39,16 @@ Say a profile pins a fintech client's palette to navy plus two neutrals, with a 
 
 ## Reference library
 
-14 deep-reference files loaded on demand:
+18 deep-reference files loaded on demand:
 
 - `aesthetic-derivation.md` — the uniqueness engine: derive a distinctive direction from product context (rank three brand adjectives → mine the product's physical-world artifacts → extract transferable properties), typography voices, layout structures beyond the centered stack, color logic, material-transfer-by-industry, the asset library map, and background/visual-detail techniques
 - `design-tokens.md` — spacing, color, type, shadow, radius CSS custom properties + signature gradient recipes
 - `component-library.md` — buttons, inputs, cards, tables, modals, navigation, badges, toasts
 - `polish-and-craft.md` — animation timing tables, polish techniques, responsive specs, and mobile/React Native (Reanimated) patterns
 - `section-patterns.md` — composition vocabulary by job: name what a section does (routes elsewhere, handles a doubt, shows a sequence, proves a claim) before choosing its shape; each pattern lists its failure conditions
-- `motion-patterns.md` — motion element vocabulary by job (entrance, scroll progress, pointer response, state change, ambient, view transition, value change) plus the implementation ladder: CSS first, a library last
+- `motion-patterns.md` — motion element vocabulary by job (entrance, scroll progress, pointer response, state change, ambient, view transition, value change) plus the implementation ladder: the platform's own effects or CSS first, the profile's library last
+- `motion-site-pass.md` — adding motion to a whole page or site: every section starts at no motion; one job per section from a closed list, a gate, a budget with a basis for every number, a motion map with rejected candidates and a verdict, and a checklist the agent runs to prove what shipped
+- `motion-recipes.md` — six techniques checked in a browser: word-mask text reveal, 3D card flip, pointer tilt, 3D ring carousel and scroll tilt-in, glowing path with a travelling dot, scroll-linked rail fill and marker; each with when, when not, accessibility, performance, support and a CSS skeleton
 - `reference-sources.md` — where to go look, by need: two or three specific places and the question to ask at each, and the capture-and-compare routine, instead of designing from memory
 - `diagram-default-style.md` — the fallback diagram language when no brand profile is loaded: complexity budget (9 nodes / 12 edges), one or two focal elements, enumerated spacing and type scales, Editorial / Sketchy / Terminal variants
 - `patterns-and-flows.md` — pattern selection library stating when each works, fails, and is misused: onboarding, auth, forms, checkout, e-commerce, search, navigation, dashboards, settings, empty states, destructive actions, notifications, cross-industry transfer
@@ -55,6 +57,8 @@ Say a profile pins a fintech client's palette to navy plus two neutrals, with a 
 - `ux-rules-reference.md` — full 205-rule reference with implementation details
 - `visual-checklist.md` — exhaustive visual inspection checklist for live-site review
 - `framework-fixes.md` — framework-specific source-level fix patterns
+- `design-system-generator.md` — how to run the palette, font-pairing and style search scripts
+- `live-site-review.md` — the inspect, prioritise, fix and re-verify loop for a running site
 
 ## Data
 
@@ -115,6 +119,9 @@ Finsweet Client First and BEM — integrated into the skill by Ekaterina Pykhova
 
 **Merge and integration**
 Carried out by Ekaterina Pykhova: mapping overlap across the five source skills, merging duplicated sections, structuring the five-layer workflow, and adding typography metrics integration.
+
+**Motion site pass and recipes**
+Ideas restated, not copied: the gate, the rejected list, the verdict and the removal tree from Emil Kowalski's [animation skills](https://github.com/emilkowalski/skills) (MIT); the uniformity thresholds from [design-motion-principles](https://github.com/kylezantos/design-motion-principles) (MIT); the motion thesis and visitor modes from [impeccable](https://github.com/pbakaus/impeccable) (Apache-2.0); split units and stagger values from [taste-skill](https://github.com/Leonxlnx/taste-skill) (MIT). Also drawn on: Nielsen Norman Group on scroll animation, the Atlassian and Carbon motion guidelines, Val Head's motion audit, and WCAG 2.2.
 
 ## License
 
