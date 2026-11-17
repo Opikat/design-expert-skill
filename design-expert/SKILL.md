@@ -372,6 +372,20 @@ Each of these came back near-identical from both models (6/6 unless noted):
   for a brief that named no device at all, so any numbered layer stack now needs
   an argument.
 
+### A reference is the bar to clear, not the template
+
+When a brief names a competitor or a "model" product as the reference, treat it
+as the baseline to beat. Rebuilding its structure guarantees sameness: products
+that draw on the same data or do the same job already look alike, so a copied
+concept leaves nothing to tell them apart.
+
+- Differentiate on the concept: change the page's primary object or its main
+  interaction, not the list of fields.
+- Keep the material everyone shows (the shared data, the FAQ) as substrate below
+  the part that is yours.
+- When a draft starts to resemble the reference, re-open the concept. Polishing
+  the resemblance is not progress.
+
 ## Step 5: Diverge Before You Converge
 
 For any new design (not small edits), generate THREE genuinely different
