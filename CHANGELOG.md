@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **`SKILL.md`**, Step 4. New subsection "A reference is the bar to clear, not the template": when a brief names a model product, differentiate on the concept (the page's primary object or main interaction), keep the shared material as substrate, and re-open the concept when a draft starts to resemble the reference.
+
 ## 3.0.0 — 2026-11-03
 
 Motion for whole pages and sites: where it goes, how much, and how the agent proves it.
