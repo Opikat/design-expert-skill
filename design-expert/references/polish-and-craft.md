@@ -74,9 +74,12 @@ Recessed feel on text fields:
 }
 ```
 
-### 8. Gradient Text (Sparingly)
-For hero headings only, with stops from the product's own palette (the default
-indigo→pink `#6366F1 → #EC4899` is banned — Step 4):
+### 8. Gradient Text (Only When the Direction Is Built on It)
+Gradient-filled text is a banned starting point (Step 4): it is the measured
+Fable default on headline phrases and numbers. Use it only when the brand itself
+is a gradient (its logo or its identity system carries one), on one hero heading,
+with stops from the product's own palette, and with the darker stop passing 4.5:1
+against the background. The default indigo→pink `#6366F1 → #EC4899` stays banned:
 ```css
 .hero-heading {
   background: linear-gradient(135deg, var(--accent-700), var(--accent-500));
@@ -95,7 +98,7 @@ indigo→pink `#6366F1 → #EC4899` is banned — Step 4):
   --ease-out: cubic-bezier(0.2, 0, 0, 1);         /* entering — example; derive per direction (the default `cubic-bezier(0.16, 1, 0.3, 1)` is banned — Step 4) */
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);        /* exiting */
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);   /* repositioning */
-  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);     /* playful bounce */
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);     /* overshoot: gestures and playful directions only, never menus, dialogs or routine entrances */
 }
 ```
 

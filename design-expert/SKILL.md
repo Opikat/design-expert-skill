@@ -305,7 +305,11 @@ least three in every design and be able to point at what you did instead:
 | Inter/system font for everything | A non-decision wearing a font file |
 | Three-card feature grid, icons in rounded squares | Layout autopilot |
 | Glassmorphism blur panels | Decoration with no relationship to any brand |
-| Timid type: 24–32px "hero" headlines | A hero that whispers; scale contrast is the cheapest drama available |
+| Timid type: 24–32px "hero" headlines | A hero that whispers; scale contrast is the cheapest drama available. The opposite failure is a full sentence set at display size: display size carries a short phrase, a sentence wraps into a wall |
+| Gradient-filled text on a headline phrase or a number | The measured Fable default (see the table below), not a decision; colour the phrase flat or let weight and size carry it |
+| An accent stripe down one side of a rounded card, alert or callout, or a thick accent border on a rounded box | Decoration posing as status; status goes into the content (icon plus word) or the whole surface tone. A bar marking the current item of a vertical list is a selection mark, not this |
+| Glow halos, radial spotlights and soft light blooms behind content | Mood lighting with no job; on dark it also muddies contrast |
+| Tech props as decoration: a blinking typing cursor, a hairline grid-paper background, repeating stripe gradients, an unblurred offset shadow | Borrowed costume. Each is fine when the direction is derived from it (Step 2), never as garnish on a direction that came from elsewhere |
 | Perfectly symmetric layouts throughout | Symmetry everywhere = tension nowhere |
 | Emoji as icons or decoration | Platform-inconsistent, tone-uncontrolled — the loudest AI tell |
 | Hand-drawn SVG icon paths | Improvised beziers read as broken; icon systems exist (Step 10) |
@@ -753,7 +757,11 @@ minutes.`; a stat row reading `Open · Overdue · Closed this month · Drafts`; 
 try again.`; the button set `Get started free` / `See how it works` / `Talk to
 sales` / `View all` / `Export`; the three-clause value subhead `<verb> in
 minutes, <verb> online, and <benefit>`; a negation-pair headline (`X, not Y`);
-any descriptor written as exactly three nouns. Swap the domain noun and the
+any descriptor written as exactly three nouns; marketing verbs that promise
+without saying what happens (`streamline`, `empower`, `supercharge`, `seamless`,
+`unlock`, `elevate`, `effortless`); an "X theater" framing; em dashes as the
+default joint (more than one per paragraph, or eight in a page of body copy).
+Swap the domain noun and the
 pattern is unchanged, so ban the shape rather than the vocabulary. Instead: name
 the specific next action with its object in the empty state, name what actually
 failed in the error, and let the count of items in a list be whatever the product
@@ -781,6 +789,7 @@ Run all three checklists before presenting. Fix failures first.
 
 ### System checklist
 - [ ] Spacing on the grid; internal ≤ external everywhere?
+- [ ] Alignment measured by visible edges — glyph ink (e.g. `Range` box plus `measureText().actualBoundingBoxLeft`) and filled panels — not by element boxes; a claim of "aligned" names what was measured and at which viewport widths?
 - [ ] Type sizes from the scale (type scale from Step 9); max 2 typefaces?
 - [ ] 60-30-10 held; AA contrast; consistent gray temperature?
 - [ ] One radius personality; nested radii correct?
@@ -788,6 +797,10 @@ Run all three checklists before presenting. Fix failures first.
 - [ ] All interactive states designed; dark mode considered?
 - [ ] Touch targets ≥ 44px; color never the only signal?
 - [ ] Icons from one established family (no emoji, no improvised SVG); placeholders art-directed, not gray boxes?
+- [ ] Text setting: no justified body text; uppercase only for short labels, never a passage; headings `text-wrap: balance`, body `text-wrap: pretty`, so no one-word last line?
+- [ ] Heading rhythm: the space above a heading is larger than the space below it, so the heading belongs to what follows?
+- [ ] Edges: body text at least 16px from the viewport edge on a phone; cards in a scroller do not sit flush against its edge?
+- [ ] Nothing hidden by layout: no text under another element, no positioned child clipped by `overflow: hidden`, no image buried under an opaque wash, the same text not repeated three times in one card?
 
 ### UX checklist
 - [ ] New user understands what to do within 5 seconds?
