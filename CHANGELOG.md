@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- **`SKILL.md`**, Step 4. The banned-starting-point table gains gradient-filled text, an accent stripe or thick accent border on a rounded card, glow halos and radial spotlights, and tech props used as garnish (typing cursor, grid-paper background, repeating stripes, unblurred offset shadow). The timid-type row now also names the opposite failure: a full sentence at display size.
+- **`SKILL.md`**, Step 14. Banned strings add promise verbs (`streamline`, `empower`, `supercharge`, `seamless`, `unlock`, `elevate`, `effortless`), the "X theater" framing and em dashes as the default joint.
+- **`SKILL.md`**, Step 16. The system checklist adds alignment measured by visible edges, text setting (no justified body, no uppercase passages, `text-wrap: balance/pretty`), heading rhythm, edge gutters on a phone, and what layout hides (occlusion, clipping, an image under an opaque wash, repeated text).
+- **`references/polish-and-craft.md`** §8 and **`references/design-tokens.md`**: gradient text is a banned starting point with one exception, a brand whose identity is a gradient. The `--spring` token is marked as not for menus, dialogs or routine entrances.
+
 - **`SKILL.md`**, Step 4. New subsection "A reference is the bar to clear, not the template": when a brief names a model product, differentiate on the concept (the page's primary object or main interaction), keep the shared material as substrate, and re-open the concept when a draft starts to resemble the reference.
 
 ## 3.0.0 — 2026-11-03

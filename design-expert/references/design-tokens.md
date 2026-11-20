@@ -226,4 +226,4 @@ For subtle button micro-gradients (same hue, ±4% lightness) see
 - Gradient direction: `135deg` (top-left → bottom-right) is the default diagonal
 - Contrast check: text on any gradient must pass 4.5:1 against the darker stop
 - Never gradient + shadow + border — pick one depth device per element
-- Gradient text only on heroes (see `polish-and-craft.md` §8)
+- Gradient text is a banned starting point; the one exception is in `polish-and-craft.md` §8
